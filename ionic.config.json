@@ -1,0 +1,7 @@
+{
+  "name": "BarbadosApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
