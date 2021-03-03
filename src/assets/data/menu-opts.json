@@ -1,0 +1,16 @@
+[{
+  "icon": "help-outline",
+  "name": "Verdad o Desafío",
+  "redirectTo": "/pages/inicio"
+},
+{
+  "icon": "id-card-outline",
+  "name": "Piramide",
+  "redirectTo": "/pages/inicio"
+},
+{
+  "icon": "card-outline",
+  "name": "Cartas2",
+  "redirectTo": "/pages/inicio"
+}
+]

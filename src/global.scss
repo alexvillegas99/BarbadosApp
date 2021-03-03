@@ -24,3 +24,40 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+//Mis CssGlobales
+.btn-3d {
+    padding: .6rem 1rem;
+    border: 1px solid #094799;
+    border-radius: 4px;
+    background: #023a8f;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 100%;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+      0 1px 3px rgba(0,0,0,.2);
+  }
+  
+  .btn-3d:hover, .btn-3d:focus {
+    background-color: #023a8f;
+  }
+  
+  .btn-3d:active {
+    background-color: #023a8f;
+    box-shadow: 0 2px 3px 0 rgba(0,0,0,.2) inset;
+  }
+
+  .btn-icon {
+    padding: .6rem 1rem;
+    border: 1px solid #094799;
+    border-radius: 4px;
+    background:var(--ion-color-mycolor2);
+    color: #fff;
+    font-size: 1.5rem;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
+      0 1px 3px rgba(0,0,0,.2);
+  }
+
+

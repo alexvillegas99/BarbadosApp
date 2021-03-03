@@ -1,0 +1,39 @@
+
+<ion-content>
+  <ion-slides pager="ios" class="slide-full" *ngIf="ocultarSlider" [options]="slideOpts">
+    <ion-slide>
+     <ion-card mode="ios">
+       <ion-img src="/assets/gifCarga.gif" class="slide-image"></ion-img>
+       <ion-card-header>
+         <ion-card-subtitle>Cargando</ion-card-subtitle>
+       </ion-card-header>
+       <ion-card-content>
+       Espere por favor...
+       </ion-card-content>
+     </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+
+  <ion-slides pager="ios" class="slide-full" *ngIf="!ocultarSlider">
+    <ion-slide>
+   
+     <ion-card mode="ios">
+     
+       <ion-img [src]="tipoImagen" class="slide-image"></ion-img>
+       
+       <ion-card-header>
+         <ion-card-subtitle>{{jugadorActual}}</ion-card-subtitle>
+       </ion-card-header>
+       <ion-card-content>
+       {{preguntaMostrar.pregunta}}
+       </ion-card-content>
+       <ion-label ><h1>{{tipo}}</h1></ion-label>
+      <ion-button (click)="Jugar()" class="btn-continuar">
+       Continuar
+      </ion-button>
+     </ion-card> 
+    </ion-slide>
+  </ion-slides>
+  
+</ion-content>

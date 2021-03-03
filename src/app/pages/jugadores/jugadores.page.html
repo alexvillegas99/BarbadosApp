@@ -1,0 +1,37 @@
+
+<ion-content class="ion-padding" color="mycolor2">
+<input type="" class="myinput"  color="texto" placeholder="Jugador" [(ngModel)]="nombrejugador"/>
+<ion-grid fixed>
+  <ion-row>
+    <ion-col size="6">
+      <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('m')">
+          <ion-img src="/assets/masculino.png"></ion-img>
+      </ion-button>
+     
+    </ion-col>
+    <ion-col size="6">
+      <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('f')"> 
+      <ion-img src="/assets/femenino.png"></ion-img>
+    </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  <button expand="block" class="btn-3d" (click)="agregarJugador()" text-center>Añadir Jugador</button>
+
+<ion-list color="mycolor2" class="ion-no-border" class="ion-no-padding">
+  <ion-list-header text-center color="mycolor2">
+    <ion-label color="texto" style="text-align: center;"><h1 >Jugadores</h1></ion-label>
+    
+  </ion-list-header>
+  <ion-item *ngFor="let jugador of jugadores" color="mycolor2">
+    <ion-label  color="texto">Nombre: {{jugador.nombre}}       Género:   {{jugador.genero}}</ion-label>
+    
+      <button class="btn-icon"  (click)="eliminarJugador(jugador.nombre)">
+        <ion-icon slot="end" name="trash" color="danger"></ion-icon>
+      </button>
+   
+  </ion-item>
+</ion-list>
+<ion-label  *ngIf="condicion" color="danger">{{textoCondicion}}</ion-label>
+<button expand="block" class="btn-3d" (click)="cargarPartida()" text-center >Seleccionar niveles</button>
+</ion-content>

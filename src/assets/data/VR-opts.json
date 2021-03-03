@@ -1,0 +1,108 @@
+[
+    {
+        "tipoPregunta": "Verdad",
+        "preguntas": [
+            {
+            "categoria": "facil",
+            "preguntas": [
+                {
+                    "id": "vf1",
+                    "pregunta": "¿Utilizas Instagram para llamar la atención?"
+                },{
+                    "id": "vf2",
+                    "pregunta": "¿Dónde te gustaria ir de viaje?"
+                },{
+                    "id": "vf3",
+                    "pregunta": "¿Cuantos idiomas hablas?"
+                },{
+                    "id": "vf4",
+                    "pregunta": "¿Cuál es el peor regalo que has recibido?"
+                },{
+                    "id": "vf5",
+                    "pregunta": "¿Te has liado con alguien que su nombre empieze con A?"
+                },{
+                    "id": "vf6",
+                    "pregunta": "¿Has comido algo caducado?"
+                }
+            ]
+        },
+        {
+            "categoria": "normal",
+            "preguntas": [
+                {
+                    "id": "vn1",
+                    "pregunta": "¿Te gustaria que te dibujasen sin ropa?"
+                },{
+                    "id": "vn2",
+                    "pregunta": "¿Te gustaria debar a la persona que esta a tu derecha?"
+                },{
+                    "id": "vn3",
+                    "pregunta": "¿Que es lo mas atrevido que has hecho en público?"
+                },{
+                    "id": "vn4",
+                    "pregunta": "¿Te han llevado en ambulacia después de salir de fiesta?"
+                },{
+                    "id": "vn5",
+                    "pregunta": "¿has conducido un auto sin permiso de conducir?"
+                },{
+                    "id": "vn6",
+                    "pregunta": "¿Has usado tinder?"
+                }
+            ]
+        }
+        ]
+    },
+    {
+        "tipoPregunta": "Desafio",
+        "preguntas": [
+            {
+            "categoria": "facil",
+            "preguntas": [
+                {
+                    "id": "df1",
+                    "pregunta": "Juega a piedra papel o tijeras con la persona que tengas delante hasta que ganes una partida!"
+                },{
+                    "id": "df2",
+                    "pregunta": "Durante las 2 proximas rondas debes actuar en camara lenta!"
+                },{
+                    "id": "df3",
+                    "pregunta": "Di el álfabeto al revés!"
+                },{
+                    "id": "df4",
+                    "pregunta": "No puedes decir 'si' durante el resto del juego"
+                },{
+                    "id": "df5",
+                    "pregunta": "Dejate pintar los labios"
+                },{
+                    "id": "df6",
+                    "pregunta": "Baila como loco sin musica"
+                }
+            ]
+        },
+        {
+            "categoria": "normal",
+            "preguntas": [
+                {
+                    "id": "dn1",
+                    "pregunta": "Haz algo sexy con comida"
+                },{
+                    "id": "dn2",
+                    "pregunta": "Llama a tus padres y pregunta si les gustaria ser abuelos"
+                },{
+                    "id": "dn3",
+                    "pregunta": "Llama a un restaurante de comida rápida y di que estas en huelga de hambre"
+                },{
+                    "id": "dn4",
+                    "pregunta": "De a otra persona 3 cosas malas sobre él/ella"
+                },{
+                    "id": "dn5",
+                    "pregunta": "Publica en un grupo de facebook para veganos: 'Que rica está la carne!'"
+                },{
+                    "id": "dn6",
+                    "pregunta": "Lee en voz alta todos los mensajes que lleguen durante todo el juego"
+                }
+            ]
+        }
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="menu-main" color="texto"></ion-menu-button>
+    </ion-buttons>
+    <ion-title color="texto">Barbados 1569</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-border" color="mycolor2">
+<!-- <ion-slides [options]='slideOpts'>
+    <ion-slide>
+      <ion-img [src]="imgActual"></ion-img>
+    </ion-slide>
+  </ion-slides>
+-->
+<ion-grid fixed class="ion-text-center">
+  <ion-row class="ion-text-center">
+    <ion-col size="6" *ngFor="let c of componentes" >
+        <ion-card (click)="CambiarVentana(c.name)">
+          <ion-img src="/assets/b1.jpg"></ion-img>
+          <ion-card-header>
+            <ion-card-title>{{c.name}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+        
+    </ion-col>
+    
+  </ion-row>
+</ion-grid>
+</ion-content>

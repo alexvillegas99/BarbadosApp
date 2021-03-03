@@ -1,3 +1,39 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId='menu-main' class="ion-no-border" class="ion-no-padding" content-id='main' color="mycolor2">
+    <ion-header >
+      <ion-toolbar color="mycolor" class="ion-no-border" class="ion-no-padding">
+        <ion-title color="texto">Barbados 1569</ion-title>
+      </ion-toolbar>
+    </ion-header >
+    <ion-content color="mycolor2" class="ion-no-border" class="ion-no-padding">
+    <ion-list color="mycolor2" class="ion-no-border" class="ion-no-padding">
+  
+      <ion-menu-toggle *ngFor="let c of componentes | async"  autoHide="false" class="ion-no-padding" color="mycolor2" >
+        <ion-item  [routerLink]="c.redirectTo" detail color="mycolor2">
+          <ion-icon [name]="c.icon" color="texto" slot="start"></ion-icon>
+        <ion-label color="texto"> {{c.name}}</ion-label> 
+        </ion-item>
+
+      </ion-menu-toggle>
+
+
+    </ion-list>
+  </ion-content>
+  <ion-item color="mycolor2" class="ion-no-border" class="ion-no-padding">
+    <ion-label color="texto">Redes Sociales</ion-label>
+  </ion-item>
+  <ion-list class="ion-no-border" class="ion-no-padding">
+
+    <ion-menu-toggle *ngFor="let c of redesSociales | async" autoHide="false">
+      <ion-item detail (click)="abrirSosial(c.redirectTo)" color="mycolor2">
+        <ion-icon [name]="c.icon" color="texto" slot="start" ></ion-icon>
+        <ion-label color="texto"> {{c.name}}</ion-label> 
+      </ion-item>
+
+    </ion-menu-toggle>
+
+
+  </ion-list>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

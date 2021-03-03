@@ -1,0 +1,10 @@
+[
+    {
+        "nivel":"facil",
+        "selected": false
+    },
+    {
+        "nivel":"normal",
+        "selected": false
+    }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "logo-facebook",
+    "name": "Facebook",
+    "redirectTo": "https://web.facebook.com/Barbados1569"
+  }
+  ,
+  {
+    "icon": "logo-whatsapp",
+    "name": "Whatsapp",
+    "redirectTo": "https://wa.link/wh50mo"
+  },
+  {
+    "icon": "logo-whatsapp",
+    "name": "Barbados 1965",
+    "redirectTo": "http://www.barbados1569.com"
+  }
+  ]
