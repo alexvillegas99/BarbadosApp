@@ -29,6 +29,7 @@ export class JugadoresPage implements OnInit {
   }
   async eliminarJugador(item:string) {
     const alert = await this.alertCtrl.create({
+      cssClass: 'background: var(--ion-color-mycolor2)',
       header: 'Advertencia',
       message: 'Eliminar Jugador?',
       buttons: [{text:'Eliminar',handler:()=>{

@@ -3,20 +3,21 @@ import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomePage implements OnInit{
+export class HomePage implements OnInit {
+
+  constructor( private navCtrl: NavController) {}
+
   slideOpts={
     allowSlidePrev:false,
     allowSlideNext:false
   }
-  constructor( private navCtrl: NavController) {}
-  ngOnInit(){
-  setTimeout(() => {
-this.navCtrl.navigateForward('/inicio');
-    }, 3000);
-    
+  ngOnInit() {
+    setTimeout(() => {
+      this.navCtrl.navigateForward('/inicio');
+          }, 3000);
   }
 
 }

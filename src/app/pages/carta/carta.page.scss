@@ -1,0 +1,51 @@
+
+.slide-full {
+    height: 100% !important;
+    position: relative;
+    background-image: linear-gradient(to bottom, #051937, #0d3053, #144971, #19648f, #1d80ac);
+}
+ion-card {
+    overflow: unset !important;
+}
+
+ion-card {
+    position: fixed;
+    height: 500px;
+    width: 300px;
+}
+.tipo{
+    top: -300px;
+}
+.slide-image {
+    width: 100px;
+    text-align: left;
+    top: -50px;
+}
+.slide-image2 {
+    width: 100px;
+    text-align: right;
+    margin-left: 66%;
+    margin-top: 100px;
+}
+
+
+ion-card-header {
+    position: relative;
+    top: -50px;
+}
+
+ion-card-content {
+    position: relative;
+    top: 100px;
+    height: 200px;
+}
+
+.avatar {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-continuar{
+    margin-top: 650px;
+}

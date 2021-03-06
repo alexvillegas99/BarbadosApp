@@ -23,7 +23,7 @@ export interface Nivel {
   nivel: string;
   selected: boolean;
 }
-export interface Jugadores {
+export interface Jugadores { 
   nombre: string;
   genero:string;
 }
