@@ -28,9 +28,9 @@
 //Mis CssGlobales
 .btn-3d {
     padding: .6rem 1rem;
-    border: 1px solid #094799;
+    border: 1px solid #c3156b;
     border-radius: 4px;
-    background: #023a8f;
+    background: #c3156b;
     color: #fff;
     font-size: 1.5rem;
     width: 100%;
@@ -40,24 +40,22 @@
   }
   
   .btn-3d:hover, .btn-3d:focus {
-    background-color: #023a8f;
+    border: 1px solid #59419f;
+    background-color: #59419f;
   }
   
   .btn-3d:active {
-    background-color: #023a8f;
+    background-color: #59419f;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,.2) inset;
   }
 
   .btn-icon {
     padding: .6rem 1rem;
-    border: 1px solid #094799;
+    border: 0px solid #59419f;
     border-radius: 4px;
     background:var(--ion-color-mycolor2);
     color: #fff;
     font-size: 1.5rem;
-    text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    box-shadow: 0 1px 0 rgba(255,255,255,.5) inset,
-      0 1px 3px rgba(0,0,0,.2);
   }
   //@at-root
   ion-content{
