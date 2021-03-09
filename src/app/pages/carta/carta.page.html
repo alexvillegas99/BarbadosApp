@@ -2,12 +2,12 @@
   <ion-slides pager="ios" class="slide-full"  [options]="slideOpts">
     <ion-slide>
      <ion-card mode="ios">
-       <ion-img src="/assets/icon/icon.png" class="slide-image"></ion-img>
+       <ion-img [src]="imagen" class="slide-image"></ion-img>
       
        <ion-card-content>
        Aqui se mostraran las preguntas
        </ion-card-content>
-       <ion-img src="/assets/icon/icon.png" class="slide-image2"></ion-img>
+       <ion-img [src]="imagen" class="slide-image2"></ion-img>
      </ion-card>
      <ion-button (click)="cerrarModal()" expand="block" class="btn-continuar">
       Siguiente

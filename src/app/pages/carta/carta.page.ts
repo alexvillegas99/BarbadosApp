@@ -12,6 +12,7 @@ export class CartaPage implements OnInit {
 
   ngOnInit() {
   }
+  imagen = '/assets/icon/icon.png';
   cerrarModal(){
     this.modalCtrl.dismiss();
   }
