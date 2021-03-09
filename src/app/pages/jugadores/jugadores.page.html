@@ -5,13 +5,13 @@
   <ion-row style="text-align: center;">
     <ion-col size="6">
       <ion-button class="cont-img" color="mycolor2">
-          <ion-img src="/assets/img/pirata.png"  (click)="cambiarGenero('m')"></ion-img>
+          <ion-img [src]="imgHombre"  (click)="cambiarGenero('m')"></ion-img>
       </ion-button>
      
     </ion-col>
     <ion-col size="6">
       <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('f')"> 
-      <ion-img src="/assets/img/sirena.png"></ion-img>
+      <ion-img [src]="/assets/img/sirena.png"></ion-img>
     </ion-button>
     </ion-col>
   </ion-row>

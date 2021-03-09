@@ -12,7 +12,8 @@ import { AlertController } from '@ionic/angular';
 export class JugadoresPage implements OnInit {
   nombrejugador="";
   jugadores: Jugadores[] = [];
-  
+  imgHombre='/assets/img/pirata.png';
+  imgMujer='/assets/img/sirena.png';
   textoCondicion="Minimo 2 jugadores";
   condicion=false;
   genero='';
