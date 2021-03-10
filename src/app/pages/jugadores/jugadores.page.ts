@@ -12,12 +12,11 @@ import { AlertController } from '@ionic/angular';
 export class JugadoresPage implements OnInit {
   nombrejugador="";
   jugadores: Jugadores[] = [];
-  imgHombre='/assets/img/pirata.png';
-  imgMujer='/assets/img/sirena.png';
   textoCondicion="Minimo 2 jugadores";
   condicion=false;
   genero='';
- 
+ imgHombre="/assets/img/pirata.png";
+ imgMujer="/assets/img/sirena.png";
   constructor(private route: ActivatedRoute,
               private dataLocalService:DataLocalService,
               private navCtrl:NavController,
@@ -42,6 +41,13 @@ export class JugadoresPage implements OnInit {
     await alert.present();
   }
   cambiarGenero(genero:string){
+    if(genero=='m'){
+      this.imgHombre="/assets/img/pirata-s.png";
+      this.imgMujer="/assets/img/sirena.png";
+    }else{
+      this.imgHombre="/assets/img/pirata.png";
+      this.imgMujer="/assets/img/sirena-s.png";
+    }
       this.genero = genero;
   }
   agregarJugador(){
@@ -56,6 +62,8 @@ export class JugadoresPage implements OnInit {
       this.nombrejugador = "";
       this.genero="";
       this.condicion=false;
+      this.imgHombre="/assets/img/pirata.png";
+ this.imgMujer="/assets/img/sirena.png";
     }
     
   }

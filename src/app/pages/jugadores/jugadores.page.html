@@ -1,17 +1,17 @@
 
 <ion-content class="ion-padding" color="mycolor2">
-<input type="" class="myinput"  color="texto" placeholder="Jugador" [(ngModel)]="nombrejugador"/>
+<input type="" class="myinput"  color="texto" placeholder="¿TE ATREVES?" [(ngModel)]="nombrejugador"/>
 <ion-grid fixed>
   <ion-row style="text-align: center;">
     <ion-col size="6">
-      <ion-button class="cont-img" color="mycolor2">
-          <ion-img [src]="imgHombre"  (click)="cambiarGenero('m')"></ion-img>
+      <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('m')">
+          <ion-img [src]="imgHombre"></ion-img>
       </ion-button>
      
     </ion-col>
     <ion-col size="6">
       <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('f')"> 
-      <ion-img [src]="/assets/img/sirena.png"></ion-img>
+      <ion-img [src]="imgMujer"></ion-img>
     </ion-button>
     </ion-col>
   </ion-row>
@@ -24,7 +24,8 @@
     
   </ion-list-header>
   <ion-item *ngFor="let jugador of jugadores" color="mycolor2">
-    <ion-label  color="texto">Nombre: {{jugador.nombre}}       Género:   {{jugador.genero}}</ion-label>
+    <ion-label  color="texto">
+      <H2>Nombre: {{jugador.nombre}}       Género:   {{jugador.genero}}</H2></ion-label>
     
       <button class="btn-icon"  (click)="eliminarJugador(jugador.nombre)">
         <ion-icon slot="end" name="trash" color="danger"></ion-icon>

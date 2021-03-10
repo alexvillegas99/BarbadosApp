@@ -11,7 +11,7 @@
       <ion-menu-toggle *ngFor="let c of componentes | async"  autoHide="false" class="ion-no-padding" color="mycolor2" >
         <ion-item  [routerLink]="c.redirectTo" detail color="mycolor2">
           <ion-icon [name]="c.icon" color="texto" slot="start"></ion-icon>
-        <ion-label color="texto"></ion-label> {{c.name}}</ion-label> 
+        <ion-label color="texto"> {{c.name}}</ion-label> 
         </ion-item>
 
       </ion-menu-toggle>

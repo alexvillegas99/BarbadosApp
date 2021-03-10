@@ -3,21 +3,21 @@ ion-img,.cont-img{
         width: 150px;
         
 }
-ion-img:hover{
-background-color: #e0dfe3;
-    }
+
     ion-button{
         outline:none;
     }
     ion-col{
         justify-content: center;
     }
-
+    ::placeholder { 
+        color: #B3A9A7;
+    }
     .myinput{
-        background: rgb(255, 255, 255);
+        background:#a511ad;
         height: 50px;
         width: 100%;
-        color: #c3156b;
+        color: #fff;
         text-align: center;
         font-size: 40px;
         text-shadow:  0 -1px 0 rgba(0,0,0,.5);;

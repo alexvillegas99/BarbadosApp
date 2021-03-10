@@ -12,6 +12,7 @@
 <ion-list color="mycolor2"  class="ion-no-border" class="ion-no-padding">
 <ion-item *ngFor="let nivel of niveles " color="mycolor2">
   <ion-label color="texto">{{nivel.nivel}}</ion-label>
+  <ion-icon slot="start" name="botella"></ion-icon>
   <ion-checkbox slot="end" [(ngModel)]="nivel.selected"></ion-checkbox>
 </ion-item>
 </ion-list>
