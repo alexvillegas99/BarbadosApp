@@ -1,7 +1,7 @@
 [{
   "icon": "help-outline",
   "name": "Verdad o Desafío",
-  "redirectTo": "/pages/inicio"
+  "redirectTo": "/pages/niveles"
 },
 {
   "icon": "id-card-outline",

@@ -1,19 +1,17 @@
-<ion-content>
+<ion-content color="mycolor">
   <ion-slides pager="ios" class="slide-full"  [options]="slideOpts">
     <ion-slide>
-     <ion-card mode="ios">
-       <ion-img [src]="imagen" class="slide-image"></ion-img>
+
+       <ion-img [src]="imagen"></ion-img>
       
        <ion-card-content>
-       Aqui se mostraran las preguntas
+      <label > Aqui se mostraran las preguntas</label>
        </ion-card-content>
-       <ion-img [src]="imagen" class="slide-image2"></ion-img>
-     </ion-card>
-     <ion-button (click)="cerrarModal()" expand="block" class="btn-continuar">
+   
+    </ion-slide>
+    <button (click)="cerrarModal()" expand="block" class="btn-3d">
       Siguiente
     </ion-button>
-    </ion-slide>
-    
   
   </ion-slides>
   

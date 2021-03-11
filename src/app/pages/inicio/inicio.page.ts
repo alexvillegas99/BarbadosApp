@@ -39,7 +39,7 @@ export class InicioPage implements OnInit {
   CambiarVentana(tipo:string){
     this.datalocalService.setTipo(tipo);
     if(tipo==='Verdad o Desafío'){
-      this.navCtrl.navigateForward(`/jugadores`);
+      this.navCtrl.navigateForward(`/niveles`);
     }else{
       this.navCtrl.navigateForward(`/piramide`);
     }

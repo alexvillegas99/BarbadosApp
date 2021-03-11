@@ -1,10 +1,18 @@
 [
     {
-        "nivel":"facil",
+        "nivel":"PRINCIPIANTE",
         "selected": false
     },
     {
-        "nivel":"normal",
+        "nivel":"AMATEUR",
+        "selected": false
+    },
+    {
+        "nivel":"PROFESIONAL",
+        "selected": false
+    },
+    {
+        "nivel":"TRAGASO",
         "selected": false
     }
 ]

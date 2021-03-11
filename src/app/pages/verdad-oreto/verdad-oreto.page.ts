@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Nivel, VerdadOReto, Pregunta, Preguntas, Jugadores } from '../../interfaces/interfaces';
 import { DataLocalService } from '../../services/data-local.service';
 import { DataService } from '../../services/data.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-verdad-oreto',
@@ -11,7 +12,8 @@ import { DataService } from '../../services/data.service';
 export class VerdadORetoPage implements OnInit {
 
   constructor(private dataService: DataService,
-    private dataLocalService: DataLocalService) { }
+    private dataLocalService: DataLocalService,
+    private navCtrl:NavController) { }
   ocultarSlider = true;
   slideOpts = {
     allowSlidePrev: false,
@@ -26,9 +28,11 @@ export class VerdadORetoPage implements OnInit {
   cont:number=0;
   tipoImagen="/assets/icon/icon.png";
   tipo="";
+  final = false;
   ngOnInit() {
-    this.dataLocalService.getJugadores();
-    this.jugadores = this.dataLocalService.jugadores;
+ //   this.dataLocalService.getJugadores();
+ //   this.jugadores = this.dataLocalService.jugadores;
+   this.final=false;
     this.cargarPreguntas();
     setTimeout(() => {
       this.ocultarSlider = false;
@@ -38,14 +42,14 @@ export class VerdadORetoPage implements OnInit {
   async Jugar(){
     if(this.preguntas.length>0){
     //Cambair de jugador
-    this.jugadorActual = this.jugadores[this.cont].nombre;
+   /* this.jugadorActual = this.jugadores[this.cont].nombre;
     console.log(this.jugadorActual)
     this.cont++;
     
     if(this.cont>this.jugadores.length-1){
       this.cont=0;
     }
-
+*/
     //Cambiar de pregunta  y quitar del arreglo
     let fin = this.preguntas.length;
     let pos = await Math.round(Math.random() * (fin - 0) + 0);
@@ -61,6 +65,8 @@ export class VerdadORetoPage implements OnInit {
       this.tipoImagen = "/assets/reto.png"
       this.tipo="Reto";
     }
+  }else{
+  this.final=true;
   }
   }
   async cargarPreguntas() {
@@ -88,5 +94,14 @@ export class VerdadORetoPage implements OnInit {
     })
     this.Jugar();
   }
+reiniciar(){
+  this.cargarPreguntas();
+this.final=false;
 
+}
+salir(){
+
+this.navCtrl.navigateForward('/inicio');
+
+}
 }

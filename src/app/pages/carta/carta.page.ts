@@ -9,10 +9,15 @@ import { ModalController } from '@ionic/angular';
 export class CartaPage implements OnInit {
 
   constructor(public modalCtrl: ModalController) { }
-
+ 
+  slideOpts={
+    allowSlidePrev:false,
+    allowSlideNext:false
+  }
   ngOnInit() {
   }
-  imagen = '/assets/icon/icon.png';
+  
+  imagen = '/assets/img/carta-v.png';
   cerrarModal(){
     this.modalCtrl.dismiss();
   }

@@ -3,28 +3,29 @@ import { ActivatedRoute } from '@angular/router';
 import { Nivel } from '../../interfaces/interfaces';
 import { DataService } from '../../services/data.service';
 import { DataLocalService } from '../../services/data-local.service';
-import { NavController } from '@ionic/angular';
+import { NavController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-niveles',
   templateUrl: './niveles.page.html',
   styleUrls: ['./niveles.page.scss'],
-})
+}) 
 export class NivelesPage implements OnInit {
   nivelesSeleccionados:Nivel[] =[]; 
-  constructor(private route: ActivatedRoute,
-              private navCtrl:NavController,
+  constructor(private navCtrl:NavController,
               private dataService:DataService,
-              private dataLocalService: DataLocalService) { }
+              private dataLocalService: DataLocalService,
+              private alertCtrl:AlertController) { }
 niveles:Nivel[];
-txtMostrar="";
   ngOnInit() {
     this.dataService.getNiveles()
       .subscribe(resp =>{
         this.niveles= resp;
       })
   }
-  
+  seleccionado(nivel:Nivel){
+nivel.selected = !nivel.selected;
+  }
   async cargarPartida(){
     let tipo = await this.dataLocalService.getTipo();
     this.nivelesSeleccionados = this.niveles.filter( nivel =>  nivel.selected ==true);
@@ -34,7 +35,15 @@ txtMostrar="";
       this.navCtrl.navigateForward(`/verdad-oreto`);
     }
   }else{
-    this.txtMostrar="Seleccione niveles"
+    const alert = await this.alertCtrl.create({
+      cssClass:'ion-alert',
+      header: 'Información',
+      message: 'Seleccione niveles para continuar',
+      buttons: [
+      {text:'Aceptar', role:'cancel'}]
+    });
+
+    await alert.present();
   }
   }
 }

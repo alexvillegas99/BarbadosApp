@@ -30,8 +30,8 @@ export class PiramidePage implements OnInit {
   c20 = false;
   c21 = false;
   constructor(public modalCtrl: ModalController) { }
-  imgCarta = "/assets/carta.jpg";
-  imgCartaVolteada = "/assets/cartaVolteada.jpg";
+  imgCarta = "/assets/img/carta.png";
+  imgCartaVolteada = "/assets/img/carta-v.png";
   ngOnInit() {
 
   }

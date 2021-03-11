@@ -1,23 +1,33 @@
 
+.info {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  }
 .slide-full {
     height: 100% !important;
     position: relative;
-    background-image: linear-gradient(to bottom, #051937, #0d3053, #144971, #19648f, #1d80ac);
+  //  background-image: linear-gradient(to bottom, #051937, #0d3053, #144971, #19648f, #1d80ac);
+}
+label{
+    color: #fff;
 }
 ion-card {
     overflow: unset !important;
+    background: #845899;
 }
 
 ion-card {
     position: fixed;
-    height: 200px;
+    height: 300px;
     width: 300px;
 }
 .tipo{
     top: -300px;
 }
 .slide-image {
-    width: 100px;
+    width: 150px;
     text-align: center;
 
     display: block;

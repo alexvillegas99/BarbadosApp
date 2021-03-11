@@ -13,11 +13,10 @@ export class JugadoresPage implements OnInit {
   nombrejugador="";
   jugadores: Jugadores[] = [];
   textoCondicion="Minimo 2 jugadores";
-  condicion=false;
   genero='';
- imgHombre="/assets/img/pirata.png";
+ imgHombre="/assets/img/triton.png";
  imgMujer="/assets/img/sirena.png";
-  constructor(private route: ActivatedRoute,
+  constructor(
               private dataLocalService:DataLocalService,
               private navCtrl:NavController,
               private alertCtrl:AlertController) { }
@@ -29,7 +28,6 @@ export class JugadoresPage implements OnInit {
   }
   async eliminarJugador(item:string) {
     const alert = await this.alertCtrl.create({
-      cssClass: 'background: var(--ion-color-mycolor2)',
       header: 'Advertencia',
       message: 'Eliminar Jugador?',
       buttons: [{text:'Eliminar',handler:()=>{
@@ -41,16 +39,16 @@ export class JugadoresPage implements OnInit {
     await alert.present();
   }
   cambiarGenero(genero:string){
-    if(genero=='m'){
-      this.imgHombre="/assets/img/pirata-s.png";
+    if(genero=='Masculino'){
+      this.imgHombre="/assets/img/triton-s.png";
       this.imgMujer="/assets/img/sirena.png";
     }else{
-      this.imgHombre="/assets/img/pirata.png";
+      this.imgHombre="/assets/img/triton.png";
       this.imgMujer="/assets/img/sirena-s.png";
     }
       this.genero = genero;
   }
-  agregarJugador(){
+ async agregarJugador(){
    
     if(this.nombrejugador!=='' && this.genero!==''){
       let jugador:Jugadores = {
@@ -61,20 +59,37 @@ export class JugadoresPage implements OnInit {
       console.log(this.jugadores)
       this.nombrejugador = "";
       this.genero="";
-      this.condicion=false;
-      this.imgHombre="/assets/img/pirata.png";
+      this.imgHombre="/assets/img/triton.png";
  this.imgMujer="/assets/img/sirena.png";
+    }else{
+      const alert = await this.alertCtrl.create({
+        cssClass:'ion-alert',
+        header: 'Información',
+        message: 'Ingrese un nick y seleccione su género',
+        buttons: [
+        {text:'Aceptar', role:'cancel'}]
+      });
+  
+      await alert.present();
     }
     
   }
 
-  cargarPartida(){
+ async cargarPartida(){
 
     if(this.jugadores.length>1){
       this.dataLocalService.setJugadores(this.jugadores);
       this.navCtrl.navigateForward(`/niveles`);
   }else{
-    this.condicion=true;
+    const alert = await this.alertCtrl.create({
+      cssClass:'ion-alert',
+      header: 'Información',
+      message: 'Minimo 2 jugadores',
+      buttons: [
+      {text:'Aceptar', role:'cancel'}]
+    });
+
+    await alert.present();
   }
   
   }
