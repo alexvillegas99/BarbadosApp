@@ -1,7 +1,7 @@
 
 .slide-full {
     height: 100% !important;
-    //background-image: linear-gradient(to bottom, #051937, #0d3053, #144971, #19648f, #1d80ac);
+   
 }
 ion-img {
     overflow: unset !important;
@@ -10,7 +10,8 @@ ion-img {
     width: 450px;
 }
 button{
-    margin-top: 100px;
+    position: absolute;
+    top: 90%;
 }
 label{
     color: black;
