@@ -4,6 +4,7 @@ import { Nivel } from '../../interfaces/interfaces';
 import { DataService } from '../../services/data.service';
 import { DataLocalService } from '../../services/data-local.service';
 import { NavController, AlertController } from '@ionic/angular';
+import { rendererTypeName } from '@angular/compiler';
 
 @Component({
   selector: 'app-niveles',
@@ -36,7 +37,7 @@ nivel.selected = !nivel.selected;
     }
   }else{
     const alert = await this.alertCtrl.create({
-      cssClass:'ion-alert',
+      cssClass:'my-custom-class',
       header: 'Información',
       message: 'Seleccione niveles para continuar',
       buttons: [

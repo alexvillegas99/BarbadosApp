@@ -269,7 +269,13 @@
           }
 .ion-alert
 {
- --background: #845899 !important;
+ --background: #07d2f2 !important;
+ --color: blueviolet;
 }
-      
+.my-custom-class{
+  --background: #845899 !important;
+  color:red !important;
+  
+}
+
     
