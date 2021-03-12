@@ -10,72 +10,86 @@
     
     <ion-row text-center>
       <ion-col size="2" text-center>
-
-        <ion-img [src]="imgCarta" *ngIf="!c1" (click)="presentModal(1)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar1"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c1 && activar1" (click)="presentModal(1)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c1"></ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c2" (click)="presentModal(2)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar2"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c2 && activar2" (click)="presentModal(2)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c2"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c3" (click)="presentModal(3)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar2"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c3 && activar2" (click)="presentModal(3)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c3"></ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c4" (click)="presentModal(4)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar3"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c4 && activar3" (click)="presentModal(4)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c4"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c5" (click)="presentModal(5)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar3"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c5  && activar3" (click)="presentModal(5)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c5"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c6" (click)="presentModal(6)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar3"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c6  && activar3" (click)="presentModal(6)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c6"></ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c7" (click)="presentModal(7)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar4"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c7 && activar4" (click)="presentModal(7)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c7"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c8" (click)="presentModal(8)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar4"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c8 && activar4" (click)="presentModal(8)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c8"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c9" (click)="presentModal(9)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar4"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c9 && activar4" (click)="presentModal(9)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c9"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c10" (click)="presentModal(10)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar4"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c10 && activar4" (click)="presentModal(10)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c10"></ion-img>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c11" (click)="presentModal(11)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar5"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c11 && activar5" (click)="presentModal(11)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c11"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c12" (click)="presentModal(12)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar5"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c12 && activar5" (click)="presentModal(12)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c12"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c13" (click)="presentModal(13)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar5"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c13 && activar5" (click)="presentModal(13)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c13"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c14" (click)="presentModal(14)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar5"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c14 && activar5" (click)="presentModal(14)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c14"></ion-img>
       </ion-col>
       <ion-col size="2">
-        <ion-img [src]="imgCarta" *ngIf="!c15" (click)="presentModal(15)"></ion-img>
+        <ion-img [src]="imgCartaBloqueada" *ngIf="!activar5"></ion-img>
+        <ion-img [src]="imgCarta" *ngIf="!c15 && activar5" (click)="presentModal(15)"></ion-img>
         <ion-img [src]="imgCartaVolteada" *ngIf="c15"></ion-img>
       </ion-col>
     </ion-row>

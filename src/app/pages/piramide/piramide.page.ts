@@ -7,6 +7,13 @@ import { CartaPage } from '../carta/carta.page';
   styleUrls: ['./piramide.page.scss'],
 })
 export class PiramidePage implements OnInit {
+  //
+  imgCartaBloqueada='/assets/img/carta-b.jpg';
+  activar5=false;
+  activar4=false;
+  activar3=false;
+  activar2=false;
+  activar1=false;
   //Cartas
   c1 = false;
   c2 = false;
@@ -35,8 +42,26 @@ export class PiramidePage implements OnInit {
   ngOnInit() {
 
   }
+  async activarCartas(){
+    if(this.c16 &&this.c17 &&this.c18 &&this.c19 &&this.c20 &&this.c21 ){
+      this.activar5=true;
+    }
+    if(this.c11 &&this.c12 &&this.c13 &&this.c14 &&this.c15  ){
+      this.activar4=true;
+    }
+    if(this.c7 &&this.c8 &&this.c9 &&this.c10 ){
+      this.activar3=true;
+    }
+    if(this.c4 &&this.c5 &&this.c6 ){
+      this.activar2=true;
+    }
+    if(this.c2 &&this.c3 ){
+      this.activar1=true;
+    }
+  }
   async presentModal(carta) {
 
+    
     const modal = await this.modalCtrl.create({
       component: CartaPage
     });
@@ -92,6 +117,7 @@ export class PiramidePage implements OnInit {
     } else if (carta === 21) {
       this.c21 = true;
     }
+    this.activarCartas();
     return await modal.present();
   }
 }
