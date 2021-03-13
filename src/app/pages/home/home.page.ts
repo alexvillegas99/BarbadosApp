@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { HomePageModule } from './home.module';
 
 @Component({
   selector: 'app-home',

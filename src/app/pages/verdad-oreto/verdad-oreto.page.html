@@ -1,3 +1,19 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons 
+    slot="start">
+      <ion-back-button 
+      defaultHref="/niveles"
+      color="texto"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize"><label>Niveles</label></ion-title>
+   
+   <ion-button  slot="end" (click)="modalVerdadOReto()"fill="clear">
+    <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
+   </ion-button>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content color="mycolor2">
   <ion-slides pager="ios" class="slide-full" *ngIf="ocultarSlider" [options]="slideOpts">
@@ -24,17 +40,15 @@
     
      <ion-card mode="ios">
      
-       <ion-img [src]="tipoImagen" class="slide-image"></ion-img> 
-       
+       <ion-img [src]="tipoImagen" class="slide-image2"></ion-img> 
        <ion-card-header >
-      <!--  <ion-card-subtitle><label ><h3>{{jugadorActual}}</h3></label></ion-card-subtitle>--> 
        </ion-card-header>
        <br>
-       <ion-card-content  >
-        <label style="font-size: 20px; ">  <h3>{{preguntaMostrar.pregunta}}</h3></label>
+       <ion-card-content style=" margin-top: -170px;" >
+        <label >  <h1>{{preguntaMostrar.pregunta}}</h1></label>
        </ion-card-content>
        <br>
-        <button expand="block" (click)="Jugar()"    class="btn-3d">Siguiente</button>
+        <button expand="block" (click)="Jugar()" style="margin-top: 70px;"   class="btn-3d">Siguiente</button>
      </ion-card> 
     </ion-slide>
   </ion-slides>
@@ -57,3 +71,4 @@
   </ion-slides>
 
 </ion-content>
+

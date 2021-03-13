@@ -1,4 +1,16 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons 
+    slot="start">
+      <ion-back-button 
+      defaultHref="/inicio"
+      color="texto"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
 
+  </ion-toolbar>
+</ion-header>
 
 <ion-content color="mycolor2" class="ion-padding">
   <ion-grid fixed>
@@ -17,4 +29,9 @@
   <ion-label color="danger">{{txtMostrar}}</ion-label>
   <button expand="block" (click)="cargarPartida()"   class="btn-3d">Empezar a jugar</button>
   </ion-content>
+  <ion-footer>
+    <ion-toolbar style="text-align: center;" color="footer">
+      <ion-title><label>Elije tus niveles</label></ion-title>
+    </ion-toolbar>
+  </ion-footer>
   

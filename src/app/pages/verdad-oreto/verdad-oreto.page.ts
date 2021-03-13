@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Nivel, VerdadOReto, Pregunta, Preguntas, Jugadores } from '../../interfaces/interfaces';
 import { DataLocalService } from '../../services/data-local.service';
 import { DataService } from '../../services/data.service';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
+import { ModalInfoVerdadoReroPage } from '../modal-info-verdado-rero/modal-info-verdado-rero.page';
 
 @Component({
   selector: 'app-verdad-oreto',
@@ -13,7 +14,8 @@ export class VerdadORetoPage implements OnInit {
 
   constructor(private dataService: DataService,
     private dataLocalService: DataLocalService,
-    private navCtrl:NavController) { }
+    private navCtrl:NavController,
+    private modalCtrl:ModalController) { }
   ocultarSlider = true;
   slideOpts = {
     allowSlidePrev: false,
@@ -26,7 +28,7 @@ export class VerdadORetoPage implements OnInit {
   jugadores:Jugadores[]=[];
   jugadorActual="";
   cont:number=0;
-  tipoImagen="/assets/icon/icon.png";
+  tipoImagen="/assets/img/icon.png";
   tipo="";
   final = false;
   ngOnInit() {
@@ -38,6 +40,12 @@ export class VerdadORetoPage implements OnInit {
       this.ocultarSlider = false;
     }, 5000);
 
+  }
+  async modalVerdadOReto(){
+    const modal = await this.modalCtrl.create({
+      component: ModalInfoVerdadoReroPage
+    });
+    return await modal.present();
   }
   async Jugar(){
     if(this.preguntas.length>0){
@@ -59,13 +67,14 @@ export class VerdadORetoPage implements OnInit {
     )
     //Cambiar icono
     if(this.preguntaMostrar.id.substring(0,1) == 'v'){
-      this.tipoImagen = "/assets/verdad.png";
+      this.tipoImagen = "/assets/img/verdad.png";
       this.tipo="Verdad";
     }else{
-      this.tipoImagen = "/assets/reto.png"
+      this.tipoImagen = "/assets/img/desafio.png"
       this.tipo="Reto";
     }
   }else{
+    this.tipoImagen="/assets/img/icon.png";
   this.final=true;
   }
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CartaPage } from '../carta/carta.page';
+import { ModalInfoPiramidePage } from '../modal-info-piramide/modal-info-piramide.page';
 @Component({
   selector: 'app-piramide',
   templateUrl: './piramide.page.html',
@@ -8,7 +9,7 @@ import { CartaPage } from '../carta/carta.page';
 })
 export class PiramidePage implements OnInit {
   //
-  imgCartaBloqueada='/assets/img/carta-b.jpg';
+  imgCartaBloqueada='/assets/img/carta-b.png';
   activar5=false;
   activar4=false;
   activar3=false;
@@ -118,6 +119,12 @@ export class PiramidePage implements OnInit {
       this.c21 = true;
     }
     this.activarCartas();
+    return await modal.present();
+  }
+  async modalPiramide(){
+    const modal = await this.modalCtrl.create({
+      component: ModalInfoPiramidePage
+    });
     return await modal.present();
   }
 }

@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full' 
   },
   {
     path: 'inicio',
@@ -30,6 +30,14 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'modal-info-verdado-rero',
+    loadChildren: () => import('./pages/modal-info-verdado-rero/modal-info-verdado-rero.module').then( m => m.ModalInfoVerdadoReroPageModule)
+  },
+  {
+    path: 'modal-info-piramide',
+    loadChildren: () => import('./pages/modal-info-piramide/modal-info-piramide.module').then( m => m.ModalInfoPiramidePageModule)
   },
 ];
 

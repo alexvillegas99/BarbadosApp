@@ -1,12 +1,23 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons 
+    slot="start">
+      <ion-back-button 
+      color="texto"
+      defaultHref="/inicio"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
+   
+   <ion-button  slot="end" (click)="modalPiramide()"fill="clear">
+    <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
+   </ion-button>
+  </ion-toolbar>
+</ion-header>
+ 
 <ion-content class="ion-no-padding" style="text-align: center;" color="mycolor2">
   <ion-grid style="text-align: center;">
-   <ion-row style="text-align: center;">
-      <ion-col>
-        <ion-label color="texto">
-          <h1>Piramide</h1>
-        </ion-label>
-      </ion-col>
-    </ion-row>
+   
     
     <ion-row text-center>
       <ion-col size="2" text-center>

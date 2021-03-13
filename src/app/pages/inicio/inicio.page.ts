@@ -20,7 +20,9 @@ export class InicioPage implements OnInit {
   imgActual = "/assets/b1.jpg";
   indice =0;
   componentes:Componente[]= [];
+  
   ngOnInit() {
+    
       this.dataService.getMenuOpts()
       .subscribe(resp =>{
         this.componentes= resp;
