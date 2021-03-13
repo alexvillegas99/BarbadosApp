@@ -55,15 +55,15 @@
   <ion-slides pager="ios" class="slide-full" *ngIf="final">
     <ion-slide>
    
-     <ion-card mode="ios">
+     <ion-card mode="ios" class="ion-card ">
      
        <ion-img [src]="tipoImagen" class="slide-image"></ion-img> 
        
        <ion-card-header >
         <ion-card-subtitle><label ><h3>Fin del juego</h3></label></ion-card-subtitle>
        </ion-card-header>
-       <ion-card-content  >
-        <button expand="block" (click)="reiniciar()"    class="btn-3d">Reiniciar</button>
+       <ion-card-content  style="margin-top: 70px;">
+        <button expand="block" (click)="reiniciar()" style="margin-bottom: 20px;"    class="btn-3d">Reiniciar</button>
         <button expand="block" (click)="salir()"    class="btn-3d">Ir al inicio</button>
        </ion-card-content>
      </ion-card> 

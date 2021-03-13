@@ -18,6 +18,7 @@ export class NivelesPage implements OnInit {
               private dataLocalService: DataLocalService,
               private alertCtrl:AlertController) { }
 niveles:Nivel[];
+mensaje='';
   ngOnInit() {
     this.dataService.getNiveles()
       .subscribe(resp =>{
@@ -26,6 +27,7 @@ niveles:Nivel[];
   }
   seleccionado(nivel:Nivel){
 nivel.selected = !nivel.selected;
+this.mensaje='';
   }
   async cargarPartida(){
     let tipo = await this.dataLocalService.getTipo();
@@ -36,15 +38,17 @@ nivel.selected = !nivel.selected;
       this.navCtrl.navigateForward(`/verdad-oreto`);
     }
   }else{
-    const alert = await this.alertCtrl.create({
+  /*  const alert = await this.alertCtrl.create({
       cssClass:'my-custom-class',
       header: 'Información',
-      message: 'Seleccione niveles para continuar',
+      message: 'Seleccione niveles para continuar', 
       buttons: [
       {text:'Aceptar', role:'cancel'}]
     });
 
     await alert.present();
+    */
+    this.mensaje='Seleccione niveles para continuar';
   }
   }
 }
