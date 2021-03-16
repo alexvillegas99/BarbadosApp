@@ -5,6 +5,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { Componente } from './interfaces/interfaces';
 import { NavController } from '@ionic/angular';
 import { DataLocalService } from './services/data-local.service';
+import { Network } from '@ionic-native/network/ngx';
 //
 
 @Component({
@@ -18,7 +19,13 @@ export class AppComponent implements OnInit{
   constructor(private dataService:DataService,
     private iab: InAppBrowser,
     private navCtrl:NavController,
-     private datalocalService:DataLocalService ) {}
+     private datalocalService:DataLocalService ,
+     private network: Network) {}
+     ionViewDidLoad(){
+      let disconnectSubscription = this.network.onDisconnect().subscribe(() => {
+        console.log('network was disconnected :-(');
+      });
+     }
   ngOnInit(){
     
     this.componentes= this.dataService.getMenuOpts();

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { PiramidePageRoutingModule } from './piramide-routing.module';
 
 import { PiramidePage } from './piramide.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PiramidePageRoutingModule
+    PiramidePageRoutingModule,
+    ComponentsModule
   ],
   declarations: [PiramidePage]
 })

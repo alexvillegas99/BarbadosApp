@@ -27,16 +27,8 @@ export class JugadoresPage implements OnInit {
     this.dataLocalService.setJugadores(this.jugadores);
   }
   async eliminarJugador(item:string) {
-    const alert = await this.alertCtrl.create({
-      header: 'Advertencia',
-      message: 'Eliminar Jugador?',
-      buttons: [{text:'Eliminar',handler:()=>{
         this.jugadores = this.jugadores.filter(jugador =>jugador.nombre!==item)
-      }},
-      {text:'Cancelar', role:'cancel',cssClass:'rojo'}]
-    });
-
-    await alert.present();
+     
   }
   cambiarGenero(genero:string){
     if(genero=='Masculino'){
@@ -79,7 +71,7 @@ export class JugadoresPage implements OnInit {
 
     if(this.jugadores.length>1){
       this.dataLocalService.setJugadores(this.jugadores);
-      this.navCtrl.navigateForward(`/niveles`);
+      this.navCtrl.navigateForward(`/traguito-caliente`);
   }else{
     const alert = await this.alertCtrl.create({
       cssClass:'ion-alert',

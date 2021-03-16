@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'modal-info-piramide',
     loadChildren: () => import('./pages/modal-info-piramide/modal-info-piramide.module').then( m => m.ModalInfoPiramidePageModule)
   },
+  {
+    path: 'traguito-caliente',
+    loadChildren: () => import('./pages/traguito-caliente/traguito-caliente.module').then( m => m.TraguitoCalientePageModule)
+  }
 ];
 
 @NgModule({

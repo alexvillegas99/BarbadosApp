@@ -2,12 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CartaPage } from '../carta/carta.page';
 import { ModalInfoPiramidePage } from '../modal-info-piramide/modal-info-piramide.page';
+import { NativeAudio } from '@ionic-native/native-audio/ngx';
 @Component({
   selector: 'app-piramide',
   templateUrl: './piramide.page.html',
   styleUrls: ['./piramide.page.scss'],
 })
 export class PiramidePage implements OnInit {
+  //
+  constructor(public modalCtrl: ModalController,
+    private nativeAudio: NativeAudio) { }
+  ionViewWillEnter(){
+    this.nativeAudio.preloadSimple('uno', 'assets/audios/audio01.mp3');
+  }
+  mostrar=false;
+  ngOnInit() {
+    setTimeout(() => {
+      this.mostrar = true;
+    }, 5000);
+  }
   //
   imgCartaBloqueada='/assets/img/carta-b.png';
   activar5=false;
@@ -37,12 +50,10 @@ export class PiramidePage implements OnInit {
   c19 = false;
   c20 = false;
   c21 = false;
-  constructor(public modalCtrl: ModalController) { }
+  
   imgCarta = "/assets/img/carta.png";
   imgCartaVolteada = "/assets/img/carta-v.png";
-  ngOnInit() {
-
-  }
+ 
   async activarCartas(){
     if(this.c16 &&this.c17 &&this.c18 &&this.c19 &&this.c20 &&this.c21 ){
       this.activar5=true;
@@ -61,7 +72,7 @@ export class PiramidePage implements OnInit {
     }
   }
   async presentModal(carta) {
-
+this.nativeAudio.play('uno');
     
     const modal = await this.modalCtrl.create({
       component: CartaPage

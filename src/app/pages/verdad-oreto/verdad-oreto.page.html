@@ -16,20 +16,7 @@
 </ion-header>
 
 <ion-content color="mycolor2">
-  <ion-slides pager="ios" class="slide-full" *ngIf="ocultarSlider" [options]="slideOpts">
-    <ion-slide>
-    
-     <ion-card mode="ios">
-       <ion-img src="/assets/img/icon.png" class="slide-image"></ion-img>
-       <ion-card-header>
-         <ion-card-subtitle> <label > Cargando</label></ion-card-subtitle>
-       </ion-card-header>
-       <ion-card-content>
-        <label > Espere por favor...</label>
-       </ion-card-content>
-     </ion-card>
-    </ion-slide>
-  </ion-slides>
+  <app-carga *ngIf="ocultarSlider"></app-carga>
 
 
   <ion-slides pager="ios" class="slide-full" *ngIf="!ocultarSlider && !final">

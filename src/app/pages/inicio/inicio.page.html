@@ -8,20 +8,39 @@
 </ion-header>
 
 <ion-content class="ion-no-border" color="mycolor2">
-<!-- <ion-slides [options]='slideOpts'>
-    <ion-slide>
-      <ion-img [src]="imgActual"></ion-img>
-    </ion-slide>
-  </ion-slides>
--->
+
+ 
 <ion-grid fixed class="ion-text-center">
   <ion-row class="ion-text-center">
     <ion-col size="12" size-lg="3" size-md="4" size-sm="6" *ngFor="let c of componentes" >
-        <ion-card (click)="CambiarVentana(c.name)">
-          <ion-img src="/assets/b1.jpg"></ion-img>
+        <ion-card (click)="CambiarVentana(c.name)" style="background-color: #845899;"> 
+          <ion-img  [src]="c.img"></ion-img>
+        </ion-card>
+        
+    </ion-col>
+    
+  </ion-row>
+</ion-grid>
+<ion-grid fixed class="ion-text-center">
+  <ion-row class="ion-text-center">
+    <ion-col size="12" size-lg="3" size-md="4" size-sm="6">
+        <ion-card> 
+          <ion-img src="/assets/img/verdadoReto.png"></ion-img>
+        </ion-card>
+         
+    </ion-col>
+    
+  </ion-row>
+</ion-grid>
+<ion-grid fixed class="ion-text-center">
+  <ion-row class="ion-text-center">
+    <ion-col size="12" size-lg="3" size-md="4" size-sm="6"  >
+        <ion-card (click)="CambiarVentana(c.name)" style="background-color: #845899;"> 
+          <ion-img src="/assets/img/verdadoReto.png"></ion-img>
           <ion-card-header>
-            <ion-card-title><label color="texto">{{c.name}}</label></ion-card-title>
+            <ion-card-title><label color="texto">Verdad o Desafio</label></ion-card-title>
           </ion-card-header>
+          
         </ion-card>
         
     </ion-col>

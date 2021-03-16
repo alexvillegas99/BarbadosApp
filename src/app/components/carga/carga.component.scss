@@ -1,0 +1,38 @@
+.slide-full {
+    height: 100% !important;
+    position: relative;
+  
+}
+
+/*para rotacion*/
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+ion-card {
+    overflow: unset !important;
+    background: #845899;
+}
+
+ion-card {
+    position: fixed;
+    height: 300px;
+    width: 300px;
+}
+.rotacion {
+    width: 200px !important;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: -100px;
+    -webkit-animation: spin 5s linear infinite;
+    -moz-animation: spin 5s linear infinite ;
+    animation: spin 5s linear infinite;
+}

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, ModalController } from '@ionic/angular';
 import { HomePageModule } from './home.module';
 
 @Component({
@@ -9,7 +9,8 @@ import { HomePageModule } from './home.module';
 })
 export class HomePage implements OnInit {
 
-  constructor( private navCtrl: NavController) {}
+  constructor( private navCtrl: NavController,
+                private modalCtrl:ModalController) {}
 
   slideOpts={
     allowSlidePrev:false,
@@ -17,7 +18,9 @@ export class HomePage implements OnInit {
   }
   ngOnInit() {
     setTimeout(() => {
+      
       this.navCtrl.navigateForward('/inicio');
+      this.modalCtrl.dismiss();
           }, 5500);
   }
 

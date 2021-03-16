@@ -1,16 +1,22 @@
 [{
-  "icon": "help-outline",
   "name": "Verdad o Desafío",
-  "redirectTo": "/pages/niveles"
+  "redirectTo": "/pages/niveles",
+  "img":"/assets/img/verdadoReto.png"
 },
 {
-  "icon": "id-card-outline",
   "name": "Piramide",
-  "redirectTo": "/pages/inicio"
+  "redirectTo": "/pages/inicio",
+  "img":"/assets/img/piramide.png"
 },
 {
-  "icon": "card-outline",
-  "name": "Cartas2",
-  "redirectTo": "/pages/inicio"
+  "name": "Traguito Caliente",
+  "redirectTo": "/pages/jugadores",
+  "img":"/assets/img/traguitoCaliente.png"
+}
+,
+{
+  "name": "Circulo",
+  "redirectTo": "/pages/inicio",
+  "img":"/assets/img/circulo.png"
 }
 ]

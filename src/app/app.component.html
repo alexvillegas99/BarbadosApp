@@ -11,26 +11,8 @@
       <!-- SnapWidget -->
 <iframe src="https://snapwidget.com/embed/921426" class="snapwidget-widget" allowtransparency="true" frameborder="0" 
 scrolling="no" style="border:none; overflow:hidden;  width:100%; height:500%; top: auto; bottom: auto;"></iframe>
-      <!--
-    <ion-list color="mycolor2" class="ion-no-border" class="ion-no-padding">
-  
-      <ion-menu-toggle *ngFor="let c of componentes | async"  autoHide="false" class="ion-no-padding" color="mycolor2" >
-        <ion-item  (click)="CambiarVentana(c.name)" detail color="mycolor2">
-          <ion-icon [name]="c.icon" color="texto" slot="start"></ion-icon>
-        <ion-label color="texto"> {{c.name}}</ion-label> 
-        </ion-item>
 
-      </ion-menu-toggle>
-
-
-    </ion-list>
-    -->
   </ion-content>
-  <!--
-  <ion-item color="mycolor2" class="ion-no-border" class="ion-no-padding">
-    <ion-label color="texto">Redes Sociales</ion-label>
-  </ion-item>
--->
   <ion-list class="ion-no-border" class="ion-no-padding">
 
     <ion-menu-toggle *ngFor="let c of redesSociales | async" autoHide="false">
@@ -38,7 +20,6 @@ scrolling="no" style="border:none; overflow:hidden;  width:100%; height:500%; to
         <ion-icon [name]="c.icon" color="texto" slot="start" ></ion-icon>
         <ion-label color="texto"> {{c.name}}</ion-label> 
       </ion-item>
-
     </ion-menu-toggle>
 
 
