@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CartaPage } from '../carta/carta.page';
-import { ModalInfoPiramidePage } from '../modal-info-piramide/modal-info-piramide.page';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
+import { ModalInfoPage } from '../modal-info/modal-info.page';
 @Component({
   selector: 'app-piramide',
   templateUrl: './piramide.page.html',
@@ -132,9 +132,9 @@ this.nativeAudio.play('uno');
     this.activarCartas();
     return await modal.present();
   }
-  async modalPiramide(){
+  async modal(){
     const modal = await this.modalCtrl.create({
-      component: ModalInfoPiramidePage
+      component: ModalInfoPage
     });
     return await modal.present();
   }

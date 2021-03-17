@@ -1,9 +1,19 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>traguitoCaliente</ion-title>
+  <ion-toolbar color="mycolor">
+    <ion-buttons 
+    slot="start">
+      <ion-back-button 
+      defaultHref="/inicio"
+      color="texto"
+      ></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
+    <ion-button  slot="end" (click)="modal()"fill="clear">
+      <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
+     </ion-button>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
+<ion-content color="mycolor2">
+  <app-carga *ngIf="!ocultarSlider"></app-carga>
 
 </ion-content>

@@ -4,9 +4,9 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TraguitoCalientePageRoutingModule } from './traguito-caliente-routing.module';
+import { CirculoPageRoutingModule } from './circulo-routing.module';
 
-import { TraguitoCalientePage } from './traguito-caliente.page';
+import { CirculoPage } from './circulo.page';
 import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    TraguitoCalientePageRoutingModule,
+    CirculoPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [TraguitoCalientePage]
+  declarations: [CirculoPage]
 })
-export class TraguitoCalientePageModule {}
+export class CirculoPageModule {}

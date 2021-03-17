@@ -3,7 +3,7 @@ import { Nivel, VerdadOReto, Pregunta, Preguntas, Jugadores } from '../../interf
 import { DataLocalService } from '../../services/data-local.service';
 import { DataService } from '../../services/data.service';
 import { ModalController, NavController } from '@ionic/angular';
-import { ModalInfoVerdadoReroPage } from '../modal-info-verdado-rero/modal-info-verdado-rero.page';
+import { ModalInfoPage } from '../modal-info/modal-info.page';
 
 @Component({
   selector: 'app-verdad-oreto',
@@ -41,9 +41,9 @@ export class VerdadORetoPage implements OnInit {
     }, 5000);
 
   }
-  async modalVerdadOReto(){
+  async modal(){
     const modal = await this.modalCtrl.create({
-      component: ModalInfoVerdadoReroPage
+      component: ModalInfoPage
     });
     return await modal.present();
   }

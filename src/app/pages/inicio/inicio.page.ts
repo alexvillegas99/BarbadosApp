@@ -38,6 +38,8 @@ export class InicioPage implements OnInit {
       this.navCtrl.navigateForward(`/piramide`);
     }else if(tipo==='Traguito Caliente'){
       this.navCtrl.navigateForward(`/jugadores`);
+    }else if(tipo==='Circulo'){
+      this.navCtrl.navigateForward(`/circulo`);
     }
    
   }

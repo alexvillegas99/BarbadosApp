@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ModalInfoVerdadoReroPage } from './modal-info-verdado-rero.page';
+import { CirculoPage } from './circulo.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ModalInfoVerdadoReroPage
+    component: CirculoPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ModalInfoVerdadoReroPageRoutingModule {}
+export class CirculoPageRoutingModule {}

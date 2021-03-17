@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-modal-info-piramide',
-  templateUrl: './modal-info-piramide.page.html',
-  styleUrls: ['./modal-info-piramide.page.scss'],
+  selector: 'app-modal-info',
+  templateUrl: './modal-info.page.html',
+  styleUrls: ['./modal-info.page.scss'],
 })
-export class ModalInfoPiramidePage implements OnInit {
-
+export class ModalInfoPage implements OnInit {
   constructor(private modalCtrl:ModalController) { }
   imagen='/assets/img/informacion.png';
   ngOnInit() {
@@ -16,3 +15,5 @@ export class ModalInfoPiramidePage implements OnInit {
     this.modalCtrl.dismiss();
       }
 }
+
+

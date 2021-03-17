@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { ModalInfoPiramidePage } from './modal-info-piramide.page';
+import { ModalInfoPage } from './modal-info.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: ModalInfoPiramidePage
+    component: ModalInfoPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ModalInfoPiramidePageRoutingModule {}
+export class ModalInfoPageRoutingModule {}

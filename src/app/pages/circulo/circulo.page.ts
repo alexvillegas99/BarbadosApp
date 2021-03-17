@@ -3,13 +3,16 @@ import { ModalController } from '@ionic/angular';
 import { ModalInfoPage } from '../modal-info/modal-info.page';
 
 @Component({
-  selector: 'app-traguito-caliente',
-  templateUrl: './traguito-caliente.page.html',
-  styleUrls: ['./traguito-caliente.page.scss'],
+  selector: 'app-circulo',
+  templateUrl: './circulo.page.html',
+  styleUrls: ['./circulo.page.scss'],
 })
-export class TraguitoCalientePage implements OnInit {
+export class CirculoPage implements OnInit {
 
-  constructor(private modalCtrl:ModalController) { }
+  constructor(private modalCtrl:ModalController){
+
+  }
+  carta='/assets/img/carta.png';
   ocultarSlider=false;
   ngOnInit() {
     setTimeout(() => {
