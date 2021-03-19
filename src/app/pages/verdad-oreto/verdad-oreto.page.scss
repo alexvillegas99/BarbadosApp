@@ -10,6 +10,43 @@
     position: relative;
   
 }
+.imgBotella{
+    height: 300px;
+   // margin-left: 25%; 
+    margin-top: 47%;
+    position: absolute;
+}
+.ruleta{
+    position:absolute;
+    height:60%;
+    width:80%;
+    margin-left:10%;
+    margin-top: 40%;
+    z-index: -1;
+}
+.rotarImagen{
+    position:absolute;
+    height:30%;
+    width:30%;
+    margin-left: 25.5%;
+    margin-top: 65%;
+    left : 40px;
+    z-index: 1;
+   -webkit-animation: spin 3s linear infinite;
+    -moz-animation: spin 3s linear infinite ;
+    animation: spin 3s linear infinite;
+    
+}
+/*para rotacion*/
+@-webkit-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
+@keyframes spin{
+    100%{-webkit-transform: rotate(360deg);}
+}
 label{
     color: #fff;
 }
@@ -31,28 +68,8 @@ ion-card {
 .tipo{
     top: -300px;
 }
-.rotacion {
-    width: 200px;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: -100px;
-    -webkit-animation: spin 5s linear infinite;
-    -moz-animation: spin 5s linear infinite ;
-    animation: spin 5s linear infinite;
-}
-/*para rotacion*/
-@-webkit-keyframes spin{
-    100%{-webkit-transform: rotate(360deg);}
-}
-@-moz-keyframes spin{
-    100%{-webkit-transform: rotate(360deg);}
-}
-@keyframes spin{
-    100%{-webkit-transform: rotate(360deg);}
-}
+
+
 .slide-image {
     width: 150px;
     text-align: center;

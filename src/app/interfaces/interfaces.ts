@@ -27,3 +27,7 @@ export interface Jugadores {
   nombre: string;
   genero:string;
 }
+export interface Piramide { 
+  fila: string;
+  texto:string;
+}

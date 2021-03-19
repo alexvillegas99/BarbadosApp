@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Componente, Nivel, VerdadOReto } from '../interfaces/interfaces';
+import { Componente, Nivel, VerdadOReto, Piramide } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +20,8 @@ export class DataService {
   }
   getVR(){
     return  this.http.get<VerdadOReto[]>('../assets/data/VR-opts.json');
+  }
+  getPiramide(){
+    return  this.http.get<Piramide[]>('../assets/data/piramide.json');
   }
 }

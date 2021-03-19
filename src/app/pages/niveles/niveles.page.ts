@@ -12,6 +12,7 @@ import { rendererTypeName } from '@angular/compiler';
   styleUrls: ['./niveles.page.scss'],
 }) 
 export class NivelesPage implements OnInit {
+ 
   nivelesSeleccionados:Nivel[] =[]; 
   constructor(private navCtrl:NavController,
               private dataService:DataService,

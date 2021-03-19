@@ -20,7 +20,6 @@ export class HomePage implements OnInit {
     setTimeout(() => {
       
       this.navCtrl.navigateForward('/inicio');
-      this.modalCtrl.dismiss();
           }, 5500);
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -9,7 +9,7 @@ import { ModalController } from '@ionic/angular';
 export class CartaPage implements OnInit {
 
   constructor(public modalCtrl: ModalController) { }
- 
+ @Input() mensaje:string;
   slideOpts={
     allowSlidePrev:false,
     allowSlideNext:false

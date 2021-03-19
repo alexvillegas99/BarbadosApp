@@ -31,6 +31,10 @@ export class VerdadORetoPage implements OnInit {
   tipoImagen="/assets/img/icon.png";
   tipo="";
   final = false;
+  rotacion=true;
+  imgRuleta='/assets/circulos/ruleta.png';
+  botella='/assets/circulos/botella.png'
+  rotarImg=true;
   ngOnInit() {
  //   this.dataLocalService.getJugadores();
  //   this.jugadores = this.dataLocalService.jugadores;
@@ -38,7 +42,9 @@ export class VerdadORetoPage implements OnInit {
     this.cargarPreguntas();
     setTimeout(() => {
       this.ocultarSlider = false;
+      this.ruleta();
     }, 5000);
+    
 
   }
   async modal(){
@@ -46,6 +52,23 @@ export class VerdadORetoPage implements OnInit {
       component: ModalInfoPage
     });
     return await modal.present();
+  }
+  async ruleta(){
+   await this.Jugar();
+   this.imgRuleta='/assets/circulos/ruleta.png';
+   this.rotacion=true;
+    this.rotarImg=true;
+    setTimeout(() => {
+      this.rotarImg=false;
+      if(this.preguntaMostrar.id.substring(0,1) == 'v'){
+        this.imgRuleta = "/assets/circulos/verdad.png";
+      }else{
+        this.imgRuleta = "/assets/circulos/desafio.png"
+      }
+      setTimeout(() => {
+        this.rotacion=false;
+      }, 2000);
+    }, 3000);
   }
   async Jugar(){
     if(this.preguntas.length>0){

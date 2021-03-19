@@ -1,18 +1,22 @@
 [
     {
-        "nivel":"PRINCIPIANTE",
-        "selected": false
+        "nivel":"facil",
+        "selected": false,
+    "imagen": "assets/niveles/facil.png"
     },
     {
-        "nivel":"AMATEUR",
-        "selected": false
+        "nivel":"medio",
+        "selected": false,
+        "imagen": "assets/niveles/medio.png"
     },
     {
-        "nivel":"PROFESIONAL",
-        "selected": false
+        "nivel":"dificil",
+        "selected": false,
+        "imagen": "assets/niveles/dificil.png"
     },
     {
-        "nivel":"TRAGASO",
-        "selected": false
+        "nivel":"tragaso",
+        "selected": false,
+        "imagen": "assets/niveles/tragaso.png"
     }
 ]

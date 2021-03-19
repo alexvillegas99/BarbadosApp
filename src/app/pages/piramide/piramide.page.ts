@@ -3,6 +3,9 @@ import { ModalController } from '@ionic/angular';
 import { CartaPage } from '../carta/carta.page';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { ModalInfoPage } from '../modal-info/modal-info.page';
+import { DataLocalService } from '../../services/data-local.service';
+import { Piramide, Preguntas } from '../../interfaces/interfaces';
+import { DataService } from '../../services/data.service';
 @Component({
   selector: 'app-piramide',
   templateUrl: './piramide.page.html',
@@ -10,24 +13,59 @@ import { ModalInfoPage } from '../modal-info/modal-info.page';
 })
 export class PiramidePage implements OnInit {
   //
+  fila1: Piramide[] = [];
+  fila2: Piramide[] = [];
+  fila3: Piramide[] = [];
+  fila4: Piramide[] = [];
+  fila5: Piramide[] = [];
+  fila6: Piramide[] = [];
+  //
   constructor(public modalCtrl: ModalController,
-    private nativeAudio: NativeAudio) { }
-  ionViewWillEnter(){
+    private nativeAudio: NativeAudio,
+    private dataService: DataService) { }
+  ionViewWillEnter() {
     this.nativeAudio.preloadSimple('uno', 'assets/audios/audio01.mp3');
   }
-  mostrar=false;
+  mostrar = false;
   ngOnInit() {
+    this.getDatosPiramide();
     setTimeout(() => {
       this.mostrar = true;
     }, 5000);
   }
+  async getDatosPiramide() {
+    await this.dataService.getPiramide()
+      .subscribe(resp => {
+        resp.forEach(pregunta => {
+          if (pregunta.fila === '6') {
+            this.fila6.push(pregunta);
+          }
+          if (pregunta.fila === '5') {
+            this.fila5.push(pregunta);
+          }
+          if (pregunta.fila === '4') {
+            this.fila4.push(pregunta);
+          }
+          if (pregunta.fila === '3') {
+            this.fila3.push(pregunta);
+          }
+          if (pregunta.fila === '2') {
+            this.fila2.push(pregunta);
+          }
+          if (pregunta.fila === '1') {
+            this.fila1.push(pregunta);
+          }
+        })
+      });
+
+  }
   //
-  imgCartaBloqueada='/assets/img/carta-b.png';
-  activar5=false;
-  activar4=false;
-  activar3=false;
-  activar2=false;
-  activar1=false;
+  imgCartaBloqueada = '/assets/img/carta-b.png';
+  activar5 = false;
+  activar4 = false;
+  activar3 = false;
+  activar2 = false;
+  activar1 = false;
   //Cartas
   c1 = false;
   c2 = false;
@@ -50,32 +88,84 @@ export class PiramidePage implements OnInit {
   c19 = false;
   c20 = false;
   c21 = false;
-  
+
   imgCarta = "/assets/img/carta.png";
   imgCartaVolteada = "/assets/img/carta-v.png";
- 
-  async activarCartas(){
-    if(this.c16 &&this.c17 &&this.c18 &&this.c19 &&this.c20 &&this.c21 ){
-      this.activar5=true;
+
+  async activarCartas() {
+    
+    if (this.c16 && this.c17 && this.c18 && this.c19 && this.c20 && this.c21) {
+      this.activar5 = true;
     }
-    if(this.c11 &&this.c12 &&this.c13 &&this.c14 &&this.c15  ){
-      this.activar4=true;
+    if (this.c11 && this.c12 && this.c13 && this.c14 && this.c15) {
+      this.activar4 = true;
     }
-    if(this.c7 &&this.c8 &&this.c9 &&this.c10 ){
-      this.activar3=true;
+    if (this.c7 && this.c8 && this.c9 && this.c10) {
+      this.activar3 = true;
     }
-    if(this.c4 &&this.c5 &&this.c6 ){
-      this.activar2=true;
+    if (this.c4 && this.c5 && this.c6) {
+      this.activar2 = true;
     }
-    if(this.c2 &&this.c3 ){
-      this.activar1=true;
+    if (this.c2 && this.c3) {
+      this.activar1 = true;
     }
   }
   async presentModal(carta) {
-this.nativeAudio.play('uno');
-    
+    this.nativeAudio.play('uno');
+    let enviar='';
+    if(carta>=16 && carta<=21){
+      let fin = this.fila6.length;
+      let pos = await Math.round(Math.random() * (fin - 0) + 0);
+      enviar= this.fila6[pos].texto;
+      this.fila6 = this.fila6.filter(pre =>
+        pre.texto !== enviar
+      )
+    }
+    if(carta>=11 && carta<=15){
+      let fin = this.fila5.length;
+      let pos = await Math.round(Math.random() * (fin - 0) + 0);
+      enviar= this.fila5[pos].texto;
+      this.fila5 = this.fila5.filter(pre =>
+        pre.texto !== enviar
+      )
+    }
+    if(carta>=7 && carta<=10){
+      let fin = this.fila4.length;
+      let pos = await Math.round(Math.random() * (fin - 0) + 0);
+      enviar= this.fila4[pos].texto;
+      this.fila4 = this.fila4.filter(pre =>
+        pre.texto !== enviar
+      )
+    }
+    if(carta>=4 && carta<=6){
+      let fin = this.fila3.length;
+      let pos = await Math.round(Math.random() * (fin - 0) + 0);
+      enviar= this.fila3[pos].texto;
+      this.fila3 = this.fila3.filter(pre =>
+        pre.texto !== enviar
+      )
+    }
+    if(carta>=2 && carta<=3){
+      let fin = this.fila2.length;
+      let pos = await Math.round(Math.random() * (fin - 0) + 0);
+      enviar= this.fila2[pos].texto;
+      this.fila2 = this.fila2.filter(pre =>
+        pre.texto !== enviar
+      )
+    }
+    if(carta==1){ 
+      let fin = this.fila1.length;
+      let pos = await Math.round(Math.random() * (fin - 0) + 0);
+      enviar= this.fila1[pos].texto;
+      this.fila1 = this.fila1.filter(pre =>
+        pre.texto !== enviar
+      )
+    }
     const modal = await this.modalCtrl.create({
-      component: CartaPage
+      component: CartaPage,
+      componentProps: {
+        'mensaje': enviar
+      }
     });
     if (carta === 1) {
       this.c1 = true;
@@ -132,7 +222,7 @@ this.nativeAudio.play('uno');
     this.activarCartas();
     return await modal.present();
   }
-  async modal(){
+  async modal() {
     const modal = await this.modalCtrl.create({
       component: ModalInfoPage
     });

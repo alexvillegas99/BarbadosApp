@@ -3,7 +3,7 @@
         "tipoPregunta": "Verdad",
         "preguntas": [
             {
-            "categoria": "PRINCIPIANTE",
+            "categoria": "facil",
             "preguntas": [
                 {
                     "id": "vf1",
@@ -27,7 +27,7 @@
             ]
         },
         {
-            "categoria": "AMATEUR",
+            "categoria": "normal",
             "preguntas": [
                 {
                     "id": "vn1",
@@ -56,7 +56,7 @@
         "tipoPregunta": "Desafio",
         "preguntas": [
             {
-            "categoria": "PRINCIPIANTE",
+            "categoria": "facil",
             "preguntas": [
                 {
                     "id": "df1",
@@ -80,7 +80,7 @@
             ]
         },
         {
-            "categoria": "AMATEUR",
+            "categoria": "normal",
             "preguntas": [
                 {
                     "id": "dn1",

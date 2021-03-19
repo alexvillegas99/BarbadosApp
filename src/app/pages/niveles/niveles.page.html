@@ -17,15 +17,14 @@
     <ion-row>
       <ion-col size="6" size-lg="3" size-md="4" size-sm="6" *ngFor="let nivel of niveles ">
         <ion-card (click)="seleccionado(nivel)" 
-        [ngClass]="{'selected': nivel.selected}" >
-          <ion-img src="/assets/b1.jpg"></ion-img>
-          <ion-card-content >
-            <ion-label color="texto" style="margin-right: 5px; font-size: 13px;"> {{nivel.nivel}}</ion-label>
-          </ion-card-content>
+        [ngClass]="{'selected': nivel.selected}">
+          <ion-img [src]="nivel.imagen" style="margin-left: 2%; margin-right: 2%;margin-top: 2%; margin-bottom: 2%;"></ion-img>
+
         </ion-card> 
       </ion-col>
     </ion-row>
   </ion-grid>
+  
   <ion-label color="danger">{{txtMostrar}}</ion-label>
   <button expand="block" (click)="cargarPartida()" style="margin-bottom: 20px;"  class="btn-3d">Empezar a jugar</button>
   <ion-label class="mensaje"><h1>{{mensaje}}</h1></ion-label>

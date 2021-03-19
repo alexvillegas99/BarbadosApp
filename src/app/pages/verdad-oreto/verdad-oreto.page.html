@@ -16,10 +16,16 @@
 </ion-header>
 
 <ion-content color="mycolor2">
-  <app-carga *ngIf="ocultarSlider"></app-carga>
+  <!--Pantalla de carga solo se muetra una vez-->
+ <app-carga *ngIf="ocultarSlider"></app-carga>
+<!--Aqui sera para que rote la cosa-->
+<div style=" position: relative; height: 100%; width: 100%;" *ngIf="rotacion && !ocultarSlider" >
+<ion-img class="ruleta" [src]="imgRuleta"></ion-img>
+<ion-img class="imgBotella" *ngIf="rotarImg" [ngClass]="{rotarImagen: rotarImg}"  [src]="botella"></ion-img>
 
-
-  <ion-slides pager="ios" class="slide-full" *ngIf="!ocultarSlider && !final">
+</div>
+ <!--Mostrar la verdad o el reto-->
+  <ion-slides pager="ios" class="slide-full" *ngIf="!ocultarSlider && !final && !rotacion">
     <ion-button class="info" slot="icon-only" >
       <ion-icon slot="start" name="information-circle"></ion-icon>
     </ion-button>
@@ -35,10 +41,11 @@
         <label >  <h1>{{preguntaMostrar.pregunta}}</h1></label>
        </ion-card-content>
        <br>
-        <button expand="block" (click)="Jugar()" style="margin-top: 70px;"   class="btn-3d">Siguiente</button>
+        <button expand="block" (click)="ruleta()" style="margin-top: 70px;"   class="btn-3d">Siguiente</button>
      </ion-card> 
     </ion-slide>
   </ion-slides>
+  <!--Mostrar las opciones de fin de juego-->
   <ion-slides pager="ios" class="slide-full" *ngIf="final">
     <ion-slide>
    
