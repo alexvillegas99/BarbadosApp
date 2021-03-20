@@ -14,8 +14,8 @@ export class VerdadORetoPage implements OnInit {
 
   constructor(private dataService: DataService,
     private dataLocalService: DataLocalService,
-    private navCtrl:NavController,
-    private modalCtrl:ModalController) { }
+    private navCtrl: NavController,
+    private modalCtrl: ModalController) { }
   ocultarSlider = true;
   slideOpts = {
     allowSlidePrev: false,
@@ -23,101 +23,111 @@ export class VerdadORetoPage implements OnInit {
   }
   preguntas: Pregunta[] = [];
   preguntasActivas: VerdadOReto[] = [];
-  preguntaMostrar:Pregunta;
+  preguntaMostrar: Pregunta;
   niveles: Nivel[];
-  jugadores:Jugadores[]=[];
-  jugadorActual="";
-  cont:number=0;
-  tipoImagen="/assets/img/icon.png";
-  tipo="";
+  jugadores: Jugadores[] = [];
+  jugadorActual = "";
+  cont: number = 0;
+  tipoImagen = "/assets/img/icon.png";
+  tipo = "";
   final = false;
-  rotacion=true;
-  imgRuleta='/assets/circulos/ruleta.png';
-  botella='/assets/circulos/botella.png'
-  rotarImg=true;
+  rotacion = true;
+  imgRuleta = '/assets/circulos/ruleta.png';
+  botella = '/assets/circulos/botella.png'
+  rotarImg = true;
   ngOnInit() {
- //   this.dataLocalService.getJugadores();
- //   this.jugadores = this.dataLocalService.jugadores;
-   this.final=false;
+    //   this.dataLocalService.getJugadores();
+    //   this.jugadores = this.dataLocalService.jugadores;
+    this.final = false;
     this.cargarPreguntas();
     setTimeout(() => {
       this.ocultarSlider = false;
-      this.ruleta();
-    }, 5000);
-    
+      this.cambioARuleta();
+    }, 4000);
+
 
   }
-  async modal(){
+  async modal() {
     const modal = await this.modalCtrl.create({
       component: ModalInfoPage
     });
     return await modal.present();
   }
-  async ruleta(){
-   await this.Jugar();
-   this.imgRuleta='/assets/circulos/ruleta.png';
-   this.rotacion=true;
-    this.rotarImg=true;
-    setTimeout(() => {
-      this.rotarImg=false;
-      if(this.preguntaMostrar.id.substring(0,1) == 'v'){
-        this.imgRuleta = "/assets/circulos/verdad.png";
-      }else{
-        this.imgRuleta = "/assets/circulos/desafio.png"
+  cambioARuleta(){
+    this.rotarImg=false;
+    this.rotacion = true;
+  }
+  async ruleta() {
+    await this.Jugar();
+    this.imgRuleta = '/assets/circulos/ruleta.png';
+    this.rotarImg = true;
+    let tiempoGira = 0;
+    if (this.preguntaMostrar.id.substring(0, 1) == 'v') {
+      let ran = await Math.round(Math.random() * (1 - 0) + 0);
+      if (ran == 1) {
+        tiempoGira = 4000;
+      } else {
+        tiempoGira = 2000;
       }
-      setTimeout(() => {
-        this.rotacion=false;
-      }, 2000);
-    }, 3000);
-  }
-  async Jugar(){
-    if(this.preguntas.length>0){
-    //Cambair de jugador
-   /* this.jugadorActual = this.jugadores[this.cont].nombre;
-    console.log(this.jugadorActual)
-    this.cont++;
-    
-    if(this.cont>this.jugadores.length-1){
-      this.cont=0;
+    } else {
+      
+        tiempoGira = 3000;
+      
     }
-*/
-    //Cambiar de pregunta  y quitar del arreglo
-    let fin = this.preguntas.length;
-    let pos = await Math.round(Math.random() * (fin - 0) + 0);
-    this.preguntaMostrar= this.preguntas[pos];
-    this.preguntas = this.preguntas.filter(pre =>
-      pre.id !== this.preguntaMostrar.id
-    )
-    //Cambiar icono
-    if(this.preguntaMostrar.id.substring(0,1) == 'v'){
-      this.tipoImagen = "/assets/img/verdad.png";
-      this.tipo="Verdad";
-    }else{
-      this.tipoImagen = "/assets/img/desafio.png"
-      this.tipo="Reto";
-    }
-  }else{
-    this.tipoImagen="/assets/img/icon.png";
-  this.final=true;
+
+    setTimeout(() => {
+      this.rotarImg = false;
+      this.rotacion = false;
+    }, tiempoGira);
   }
+  async Jugar() {
+    if (this.preguntas.length > 0) {
+      //Cambair de jugador
+      /* this.jugadorActual = this.jugadores[this.cont].nombre;
+       console.log(this.jugadorActual)
+       this.cont++;
+       
+       if(this.cont>this.jugadores.length-1){
+         this.cont=0;
+       }
+   */
+      //Cambiar de pregunta  y quitar del arreglo
+      let fin = this.preguntas.length;
+      let pos = await Math.round(Math.random() * (fin - 0) + 0);
+      this.preguntaMostrar = this.preguntas[pos];
+      this.preguntas = this.preguntas.filter(pre =>
+        pre.id !== this.preguntaMostrar.id
+      )
+      //Cambiar icono
+      if (this.preguntaMostrar.id.substring(0, 1) == 'v') {
+        this.tipoImagen = "/assets/img/verdad.png";
+        this.tipo = "Verdad";
+      } else {
+        this.tipoImagen = "/assets/img/desafio.png"
+        this.tipo = "Reto";
+      }
+    } else {
+      this.tipoImagen = "/assets/img/icon.png";
+      this.final = true;
+    }
   }
   async cargarPreguntas() {
     this.dataService.getVR()
       .subscribe(resp => {
         this.preguntasActivas = resp;
       });
-     
+
     this.niveles = await this.dataLocalService.getNiveles();
     this.niveles.forEach(nivel => {
 
       this.preguntasActivas.forEach(preguntas => {
         preguntas.preguntas.forEach(pregunta => {
           if (pregunta.categoria === nivel.nivel) {
-            pregunta.preguntas.forEach(fin=>{
+            pregunta.preguntas.forEach(fin => {
               this.preguntas.push(fin);
-             
+
             })
-            
+
           }
 
         })
@@ -126,14 +136,14 @@ export class VerdadORetoPage implements OnInit {
     })
     this.Jugar();
   }
-reiniciar(){
-  this.cargarPreguntas();
-this.final=false;
+  reiniciar() {
+    this.cargarPreguntas();
+    this.final = false;
 
-}
-salir(){
+  }
+  salir() {
 
-this.navCtrl.navigateForward('/inicio');
+    this.navCtrl.navigateForward('/inicio');
 
-}
+  }
 }

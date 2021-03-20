@@ -11,10 +11,11 @@ export class TraguitoCalientePage implements OnInit {
 
   constructor(private modalCtrl:ModalController) { }
   ocultarSlider=false;
+  tipoImagen = "/assets/img/icon.png";
   ngOnInit() {
     setTimeout(() => {
       this.ocultarSlider=true;
-    }, 5000);
+    }, 4000);
   }
   async modal(){
     const modal = await this.modalCtrl.create({
@@ -22,5 +23,8 @@ export class TraguitoCalientePage implements OnInit {
     });
     return await modal.present();
   }
-
+jugar(){
+  
 }
+}
+

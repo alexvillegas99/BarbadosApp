@@ -39,11 +39,11 @@
       <H2>Nombre: {{jugador.nombre}}       Género:   {{jugador.genero}}</H2></ion-label>
     
       <button class="btn-icon"  (click)="eliminarJugador(jugador.nombre)">
-        <ion-icon slot="end" name="trash" color="danger"></ion-icon>
+        <ion-icon slot="end" name="trash" color="mycolor"></ion-icon>
       </button>
    
   </ion-item>
 </ion-list>
 <ion-label  *ngIf="condicion" color="danger">{{textoCondicion}}</ion-label>
-<button expand="block" class="btn-3d" (click)="cargarPartida()" text-center >A jugar</button>
+<button expand="block" class="btn-3d" (click)="cargarPartida()" text-center >JUGAR</button>
 </ion-content>

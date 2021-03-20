@@ -15,5 +15,24 @@
 </ion-header>
 <ion-content color="mycolor2">
   <app-carga *ngIf="!ocultarSlider"></app-carga>
-
+  <ion-slides pager="ios" class="slide-full" *ngIf="ocultarSlider">
+    <ion-button class="info" slot="icon-only" >
+      <ion-icon slot="start" name="information-circle"></ion-icon>
+    </ion-button>
+    <ion-slide>
+    
+     <ion-card mode="ios">
+     
+       <ion-img [src]="tipoImagen" class="slide-image2"></ion-img> 
+       <ion-card-header >
+       </ion-card-header>
+       <br>
+       <ion-card-content style=" margin-top: -170px;" >
+        <label >  <h1>No ha texto</h1></label>
+       </ion-card-content>
+       <br>
+        <button expand="block" (click)="jugar()" style="margin-top: 70px;"   class="btn-3d">Siguiente</button>
+     </ion-card> 
+    </ion-slide>
+  </ion-slides>
 </ion-content>

@@ -31,7 +31,7 @@ export class PiramidePage implements OnInit {
     this.getDatosPiramide();
     setTimeout(() => {
       this.mostrar = true;
-    }, 5000);
+    }, 4000);
   }
   async getDatosPiramide() {
     await this.dataService.getPiramide()

@@ -17,7 +17,7 @@ export class CirculoPage implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.ocultarSlider=true;
-    }, 5000);
+    }, 4000);
   }
   async modal(){
     const modal = await this.modalCtrl.create({
