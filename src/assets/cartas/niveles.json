@@ -1,0 +1,22 @@
+[
+    {
+        "nivel":"facil",
+        "selected": false,
+    "imagen": "assets/niveles/facil.png"
+    },
+    {
+        "nivel":"medio",
+        "selected": false,
+        "imagen": "assets/niveles/medio.png"
+    },
+    {
+        "nivel":"dificil",
+        "selected": false,
+        "imagen": "assets/niveles/dificil.png"
+    },
+    {
+        "nivel":"tragaso",
+        "selected": false,
+        "imagen": "assets/niveles/tragaso.png"
+    }
+]

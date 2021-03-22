@@ -34,10 +34,11 @@ export class VerdadORetoPage implements OnInit {
   rotacion = true;
   imgRuleta = '/assets/circulos/ruleta.png';
   botella = '/assets/circulos/botella.png'
+  verdad=false;
+  desafio=false;
   rotarImg = true;
   ngOnInit() {
-    //   this.dataLocalService.getJugadores();
-    //   this.jugadores = this.dataLocalService.jugadores;
+    //   
     this.final = false;
     this.cargarPreguntas();
     setTimeout(() => {
@@ -62,22 +63,25 @@ export class VerdadORetoPage implements OnInit {
     this.imgRuleta = '/assets/circulos/ruleta.png';
     this.rotarImg = true;
     let tiempoGira = 0;
+    
     if (this.preguntaMostrar.id.substring(0, 1) == 'v') {
-      let ran = await Math.round(Math.random() * (1 - 0) + 0);
-      if (ran == 1) {
-        tiempoGira = 4000;
-      } else {
         tiempoGira = 2000;
-      }
     } else {
-      
-        tiempoGira = 3000;
-      
+        tiempoGira = 3400;
     }
 
     setTimeout(() => {
       this.rotarImg = false;
-      this.rotacion = false;
+      if(tiempoGira===2000){
+        this.verdad=true;
+      }else{
+        this.desafio=true;
+      }
+      setTimeout(() => {
+        this.rotacion = false;
+        this.verdad=false;
+        this.desafio=false;
+      }, 1000);
     }, tiempoGira);
   }
   async Jugar() {
@@ -92,7 +96,7 @@ export class VerdadORetoPage implements OnInit {
        }
    */
       //Cambiar de pregunta  y quitar del arreglo
-      let fin = this.preguntas.length;
+      let fin = this.preguntas.length-1;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
       this.preguntaMostrar = this.preguntas[pos];
       this.preguntas = this.preguntas.filter(pre =>
@@ -125,25 +129,18 @@ export class VerdadORetoPage implements OnInit {
           if (pregunta.categoria === nivel.nivel) {
             pregunta.preguntas.forEach(fin => {
               this.preguntas.push(fin);
-
             })
-
           }
-
         })
       })
-
     })
     this.Jugar();
   }
   reiniciar() {
     this.cargarPreguntas();
     this.final = false;
-
   }
   salir() {
-
     this.navCtrl.navigateForward('/inicio');
-
   }
 }

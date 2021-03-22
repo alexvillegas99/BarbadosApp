@@ -1,0 +1,52 @@
+[
+    {
+        "categoria": "verdad",
+        "genero": "masculino",
+        "texto": "1"
+    },
+    {
+        "categoria": "verdad",
+        "genero": "femenino",
+        "texto": "2"
+    },
+    {
+        "categoria": "verdad",
+        "genero": "masculino",
+        "texto": "3"
+    },
+    {
+        "categoria": "verdad",
+        "genero": "femenino",
+        "texto": "4"
+    },
+    {
+        "categoria": "verdad",
+        "genero": "todos",
+        "texto": "5"
+    },
+    {
+        "categoria": "desafio",
+        "genero": "masculino",
+        "texto": "6"
+    },
+    {
+        "categoria": "desafio",
+        "genero": "femenino",
+        "texto": "7"
+    },
+    {
+        "categoria": "desafio",
+        "genero": "masculino",
+        "texto": "8"
+    },
+    {
+        "categoria": "desafio",
+        "genero": "femenino",
+        "texto": "9"
+    },
+    {
+        "categoria": "desafio",
+        "genero": "todos",
+        "texto": "10"
+    }
+]

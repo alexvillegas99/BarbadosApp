@@ -1,3 +1,11 @@
 .alertCss{
     background: #a511ad;
 }
+ion-content {
+    // overwrite inline styles
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }

@@ -31,3 +31,12 @@ export interface Piramide {
   fila: string;
   texto:string;
 }
+//Traguito Caliente
+
+
+export interface traguito {
+  categoria: string;
+  genero: string;
+  tipo: string;
+  texto: string;
+}

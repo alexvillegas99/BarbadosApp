@@ -1,38 +1,38 @@
 <ion-header>
   <ion-toolbar color="mycolor">
-    <ion-buttons 
-    slot="start">
-      <ion-back-button 
-      defaultHref="/inicio"
-      color="texto"
-      ></ion-back-button>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio" color="texto"></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
-    <ion-button  slot="end" (click)="modal()"fill="clear">
+    <ion-button slot="end" (click)="modal()" fill="clear">
       <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
-     </ion-button>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-content color="mycolor2">
   <app-carga *ngIf="!ocultarSlider"></app-carga>
   <ion-slides pager="ios" class="slide-full" *ngIf="ocultarSlider">
-    <ion-button class="info" slot="icon-only" >
-      <ion-icon slot="start" name="information-circle"></ion-icon>
-    </ion-button>
     <ion-slide>
-    
-     <ion-card mode="ios">
-     
-       <ion-img [src]="tipoImagen" class="slide-image2"></ion-img> 
-       <ion-card-header >
-       </ion-card-header>
-       <br>
-       <ion-card-content style=" margin-top: -170px;" >
-        <label >  <h1>No ha texto</h1></label>
-       </ion-card-content>
-       <br>
-        <button expand="block" (click)="jugar()" style="margin-top: 70px;"   class="btn-3d">Siguiente</button>
-     </ion-card> 
+
+      <ion-img [src]="imagen" style="top: -200;"></ion-img>
+      <center>
+        <ion-card-header>
+          <ion-card-subtitle style="margin-top: -100px;"> <label>
+              <h2>{{jugadorActual.nombre}}</h2>
+            </label></ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content style="padding-left: 20%; padding-right: 20%;">
+          <label class="pregunta">
+            <h2 style="font-weight: bold;">{{PreguntaActual.texto}}</h2>
+          </label>
+        </ion-card-content>
+      </center>
+
     </ion-slide>
+    <button (click)="jugar()" style="width: 75%;left: 13%;"  class="btn-3d">
+      Siguiente
+    </button>
   </ion-slides>
+
+
 </ion-content>

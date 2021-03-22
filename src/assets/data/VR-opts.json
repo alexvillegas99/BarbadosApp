@@ -27,7 +27,7 @@
             ]
         },
         {
-            "categoria": "normal",
+            "categoria": "medio",
             "preguntas": [
                 {
                     "id": "vn1",
@@ -80,7 +80,7 @@
             ]
         },
         {
-            "categoria": "normal",
+            "categoria": "medio",
             "preguntas": [
                 {
                     "id": "dn1",
