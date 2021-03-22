@@ -1,50 +1,28 @@
 <ion-header>
   <ion-toolbar color="mycolor">
-    <ion-buttons 
-    slot="start">
-      <ion-back-button 
-      defaultHref="/inicio"
-      color="texto"
-      ></ion-back-button>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio" color="texto"></ion-back-button>
     </ion-buttons>
     <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
-    <ion-button  slot="end" (click)="modal()"fill="clear">
+    <ion-button slot="end" (click)="modal()" fill="clear">
       <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
-     </ion-button>
+    </ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-content color="mycolor2">
- <!-- <app-carga *ngIf="!ocultarSlider"></app-carga> -->
- <img src="assets/img/tituloCirculo.png" style="height: 100px; position: absolute; left: 35%; top: 3%;"  >
- <ion-img [src]="carta" ></ion-img>
- <ion-img [src]="carta" class="r1"></ion-img>
- <ion-img [src]="carta" class="r2"></ion-img>
- <ion-img [src]="carta" class="r3"></ion-img>
- <ion-img [src]="carta" class="r4"></ion-img>
- <ion-img [src]="carta" class="r5"></ion-img>
- <ion-img [src]="carta" class="r6"></ion-img>
- <ion-img [src]="carta" class="r7"></ion-img>
- <ion-img [src]="carta" class="r8"></ion-img>
- <ion-img [src]="carta" class="r9"></ion-img>
- <ion-img [src]="carta" class="r10"></ion-img>
- <ion-img [src]="carta" class="r11"></ion-img>
- <ion-img [src]="carta" class="r12"></ion-img>
- 
- <ion-img [src]="carta" class="r13"></ion-img>
+  <!-- <app-carga *ngIf="!ocultarSlider"></app-carga> -->
+
+  <img src="assets/img/tituloCirculo.png" style="height: 100px; position: absolute; left: 35%; top: 3%;">
+  <div class='circle-container'>
+    <a class='center'><img [src]='centro'></a>
+    <a class='deg0'><img [src]='carta'></a>
+    <a class='deg45'><img [src]='carta'></a>
+    <a class='deg135'><img [src]='carta'></a>
+    <a class='deg180'><img [src]='carta'></a>
+    <a class='deg225'><img [src]='carta'></a>
+    <a class='deg315'><img [src]='carta'></a>
 
 
- <ion-img [src]="carta" class="r14"></ion-img>
- <ion-img [src]="carta" class="r15"></ion-img>
- <ion-img [src]="carta" class="r16"></ion-img>
- <ion-img [src]="carta" class="r17"></ion-img>
- <ion-img [src]="carta" class="r18"></ion-img>
- <ion-img [src]="carta" class="r19"></ion-img>
- <ion-img [src]="carta" class="r20"></ion-img>
- <ion-img [src]="carta" class="r21"></ion-img>
- <ion-img [src]="carta" class="r22"></ion-img>
- <ion-img [src]="carta" class="r23"></ion-img>
- <ion-img [src]="carta" class="r24"></ion-img>
- <ion-img [src]="carta" class="r25"></ion-img>
+  </div>
 
- <ion-img [src]="carta" class="r26"></ion-img>
 </ion-content>

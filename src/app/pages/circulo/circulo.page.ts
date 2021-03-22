@@ -12,6 +12,7 @@ export class CirculoPage implements OnInit {
   constructor(private modalCtrl:ModalController){
 
   }
+  centro='/assets/img/icon.png'
   carta='/assets/img/carta.png';
   ocultarSlider=false;
   ngOnInit() {
