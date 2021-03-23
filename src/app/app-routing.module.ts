@@ -43,6 +43,10 @@ const routes: Routes = [
   {
     path: 'modal-info',
     loadChildren: () => import('./pages/modal-info/modal-info.module').then( m => m.ModalInfoPageModule)
+  },
+  {
+    path: 'carta-traguito',
+    loadChildren: () => import('./pages/carta-traguito/carta-traguito.module').then( m => m.CartaTraguitoPageModule)
   }
 ];
 

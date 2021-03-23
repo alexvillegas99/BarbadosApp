@@ -86,16 +86,7 @@ export class VerdadORetoPage implements OnInit {
   }
   async Jugar() {
     if (this.preguntas.length > 0) {
-      //Cambair de jugador
-      /* this.jugadorActual = this.jugadores[this.cont].nombre;
-       console.log(this.jugadorActual)
-       this.cont++;
-       
-       if(this.cont>this.jugadores.length-1){
-         this.cont=0;
-       }
-   */
-      //Cambiar de pregunta  y quitar del arreglo
+    
       let fin = this.preguntas.length-1;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
       this.preguntaMostrar = this.preguntas[pos];

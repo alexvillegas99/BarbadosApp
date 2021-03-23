@@ -4,7 +4,6 @@
     width: 24em; 
     height: 24em; 
     padding: 2.8em; 
-    border: dashed 1px; 
     border-radius: 50%; 
     margin: 1.75em auto 0; 
 } 
@@ -18,7 +17,12 @@
     margin: -2em; 
 }
 .center{
-    width: 50%;
+   transform: rotate(270deg) 
+    translate(3.5em) 
+    rotate(90deg);   
+    width: 15% !important;
+    height: 15% !important;
+    
 }
 .circle-container img { 
     display: block; 

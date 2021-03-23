@@ -1,262 +1,314 @@
 [
-{
- "nombre":"A",
- "tipo"  :"corazón",
- "texto" :"Venganza"
-},
-{
- "nombre":"A",
- "tipo"  :"trébol",
- "texto" :"Venganza"
-},
-{
- "nombre":"A",
- "tipo"  :"espadas",
- "texto" :"Venganza"
-},
-{
- "nombre":"A",
- "tipo"  :"diamantes",
- "texto" :"Venganza"
-},
-{
- "nombre":"2",
- "tipo"  :"corazón",
- "texto" :"A vos!"
-},
-{
- "nombre":"2",
- "tipo"  :"trébol",
- "texto" :"A vos!"
-},
-{
- "nombre":"2",
- "tipo"  :"espadas",
- "texto" :"A vos!"
-},
-{
- "nombre":"2",
- "tipo"  :"diamantes",
- "texto" :"A vos!"
-},
-{
- "nombre":"3",
- "tipo"  :"corazón",
- "texto" :"Al juez"
-},
-{
- "nombre":"3",
- "tipo"  :"trébol",
- "texto" :"Al juez"
-},
-{
- "nombre":"3",
- "tipo"  :"espadas",
- "texto" :"Al juez"
-},
-{
- "nombre":"3",
- "tipo"  :"diamantes",
- "texto" :"Al juez"
-},
-{
- "nombre":"4",
- "tipo"  :"corazón",
- "texto" :"Al mas gato"
-},
-{
- "nombre":"4",
- "tipo"  :"trébol",
- "texto" :"Al mas gato"
-},
-{
- "nombre":"4",
- "tipo"  :"espadas",
- "texto" :"Al mas gato"
-},
-{
- "nombre":"4",
- "tipo"  :"diamantes",
- "texto" :"Al mas gato"
-},
-{
- "nombre":"5",
- "tipo"  :"corazón",
- "texto" :"Al brinco"
-},
-{
- "nombre":"5",
- "tipo"  :"trébol",
- "texto" :"Al brinco"
-},
-{
- "nombre":"5",
- "tipo"  :"espadas",
- "texto" :"Al brinco"
-},
-{
- "nombre":"5",
- "tipo"  :"diamantes",
- "texto" :"Al brinco"
-},
-{
- "nombre":"6",
- "tipo"  :"corazón",
- "texto" :"Al que ves"
-},
-{
- "nombre":"6",
- "tipo"  :"trébol",
- "texto" :"Al que ves"
-},
-{
- "nombre":"6",
- "tipo"  :"espadas",
- "texto" :"Al que ves"
-},
-{
- "nombre":"7",
- "tipo"  :"diamantes",
- "texto" :"Punch"
-},
-{
- "nombre":"7",
- "tipo"  :"corazón",
- "texto" :"Punch"
-},
-{
- "nombre":"7",
- "tipo"  :"trébol",
- "texto" :"Punch"
-},
-{
- "nombre":"7",
- "tipo"  :"espadas",
- "texto" :"Punch"
-},
-{
- "nombre":"7",
- "tipo"  :"diamantes",
- "texto" :"Punch"
-},
-{
- "nombre":"8",
- "tipo"  :"corazón",
- "texto" :"Al mas morocho"
-},
-{
- "nombre":"8",
- "tipo"  :"trébol",
- "texto" :"Al mas morocho"
-},
-{
- "nombre":"8",
- "tipo"  :"espadas",
- "texto" :"Al mas morocho"
-},
-{
- "nombre":"8",
- "tipo"  :"diamantes",
- "texto" :"Al mas morocho"
-},
-{
- "nombre":"9",
- "tipo"  :"corazón",
- "texto" :"Al que se mueve"
-},
-{
- "nombre":"9",
- "tipo"  :"trébol",
- "texto" :"Al que se mueve"
-},
-{
- "nombre":"9",
- "tipo"  :"espadas",
- "texto" :"Al que se mueve"
-},
-{
- "nombre":"9",
- "tipo"  :"diamantes",
- "texto" :"Al que se mueve"
-},
-{
- "nombre":"10",
- "tipo"  :"corazón",
- "texto" :"Historia"
-},
-{
- "nombre":"10",
- "tipo"  :"trébol",
- "texto" :"Historia"
-},
-{
- "nombre":"10",
- "tipo"  :"espadas",
- "texto" :"Historia"
-},
-{
- "nombre":"10",
- "tipo"  :"diamantes",
- "texto" :"Historia"
-},
-{
- "nombre":"J",
- "tipo"  :"corazón",
- "texto" :"Izquierda"
-},
-{
- "nombre":"J",
- "tipo"  :"trébol",
- "texto" :"Izquierda"
-},
-{
- "nombre":"J",
- "tipo"  :"espadas",
- "texto" :"Izquierda"
-},
-{
- "nombre":"J",
- "tipo"  :"diamantes",
- "texto" :"Izquierda"
-},
-{
- "nombre":"Q",
- "tipo"  :"corazón",
- "texto" :"Derecha"
-},
-{
- "nombre":"Q",
- "tipo"  :"trébol",
- "texto" :"Derecha"
-},
-{
- "nombre":"Q",
- "tipo"  :"espadas",
- "texto" :"Derecha"
-},
-{
- "nombre":"Q",
- "tipo"  :"diamantes",
- "texto" :"Derecha"
-},
-{
- "nombre":"K",
- "tipo"  :"corazón",
- "texto" :"Vaso!"
-},
-{
- "nombre":"K",
- "tipo"  :"trébol",
- "texto" :"Vaso!"
-},
-{
- "nombre":"K",
- "tipo"  :"espadas",
- "texto" :"Vaso!"
-},
-{
- "nombre":"K",
- "tipo"  :"diamantes",
- "texto" :"Vaso!"
-}
+    {
+        "id": 1,
+        "nombre": "A",
+        "tipo": "corazón",
+        "texto": "Venganza"
+    },
+    {
+        "id": 2,
+        "nombre": "A",
+        "tipo": "trébol",
+        "texto": "Venganza"
+    },
+    {
+        "id": 3,
+        "nombre": "A",
+        "tipo": "espadas",
+        "texto": "Venganza"
+    },
+    {
+        "id": 4,
+        "nombre": "A",
+        "tipo": "diamantes",
+        "texto": "Venganza"
+    },
+    {
+        "id": 5,
+        "nombre": "2",
+        "tipo": "corazón",
+        "texto": "A vos!"
+    },
+    {
+        "id": 6,
+        "nombre": "2",
+        "tipo": "trébol",
+        "texto": "A vos!"
+    },
+    {
+        "id": 7,
+        "nombre": "2",
+        "tipo": "espadas",
+        "texto": "A vos!"
+    },
+    {
+        "id": 8,
+        "nombre": "2",
+        "tipo": "diamantes",
+        "texto": "A vos!"
+    },
+    {
+        "id": 9,
+        "nombre": "3",
+        "tipo": "corazón",
+        "texto": "Al juez"
+    },
+    {
+        "id": 10,
+        "nombre": "3",
+        "tipo": "trébol",
+        "texto": "Al juez"
+    },
+    {
+        "id": 11,
+        "nombre": "3",
+        "tipo": "espadas",
+        "texto": "Al juez"
+    },
+    {
+        "id": 12,
+        "nombre": "3",
+        "tipo": "diamantes",
+        "texto": "Al juez"
+    },
+    {
+        "id": 13,
+        "nombre": "4",
+        "tipo": "corazón",
+        "texto": "Al mas gato"
+    },
+    {
+        "id": 14,
+        "nombre": "4",
+        "tipo": "trébol",
+        "texto": "Al mas gato"
+    },
+    {
+        "id": 15,
+        "nombre": "4",
+        "tipo": "espadas",
+        "texto": "Al mas gato"
+    },
+    {
+        "id": 16,
+        "nombre": "4",
+        "tipo": "diamantes",
+        "texto": "Al mas gato"
+    },
+    {
+        "id": 17,
+        "nombre": "5",
+        "tipo": "corazón",
+        "texto": "Al brinco"
+    },
+    {
+        "id": 18,
+        "nombre": "5",
+        "tipo": "trébol",
+        "texto": "Al brinco"
+    },
+    {
+        "id": 19,
+        "nombre": "5",
+        "tipo": "espadas",
+        "texto": "Al brinco"
+    },
+    {
+        "id": 20,
+        "nombre": "5",
+        "tipo": "diamantes",
+        "texto": "Al brinco"
+    },
+    {
+        "id": 21,
+        "nombre": "6",
+        "tipo": "corazón",
+        "texto": "Al que ves"
+    },
+    {
+        "id": 22,
+        "nombre": "6",
+        "tipo": "trébol",
+        "texto": "Al que ves"
+    },
+    {
+        "id": 23,
+        "nombre": "6",
+        "tipo": "espadas",
+        "texto": "Al que ves"
+    },
+    {
+        "id": 24,
+        "nombre": "7",
+        "tipo": "diamantes",
+        "texto": "Punch"
+    },
+    {
+        "id": 25,
+        "nombre": "7",
+        "tipo": "corazón",
+        "texto": "Punch"
+    },
+    {
+        "id": 26,
+        "nombre": "7",
+        "tipo": "trébol",
+        "texto": "Punch"
+    },
+    {
+        "id": 27,
+        "nombre": "7",
+        "tipo": "espadas",
+        "texto": "Punch"
+    },
+    {
+        "id": 28,
+        "nombre": "7",
+        "tipo": "diamantes",
+        "texto": "Punch"
+    },
+    {
+        "id": 29,
+        "nombre": "8",
+        "tipo": "corazón",
+        "texto": "Al mas morocho"
+    },
+    {
+        "id": 30,
+        "nombre": "8",
+        "tipo": "trébol",
+        "texto": "Al mas morocho"
+    },
+    {
+        "id": 31,
+        "nombre": "8",
+        "tipo": "espadas",
+        "texto": "Al mas morocho"
+    },
+    {
+        "id": 32,
+        "nombre": "8",
+        "tipo": "diamantes",
+        "texto": "Al mas morocho"
+    },
+    {
+        "id": 33,
+        "nombre": "9",
+        "tipo": "corazón",
+        "texto": "Al que se mueve"
+    },
+    {
+        "id": 34,
+        "nombre": "9",
+        "tipo": "trébol",
+        "texto": "Al que se mueve"
+    },
+    {
+        "id": 35,
+        "nombre": "9",
+        "tipo": "espadas",
+        "texto": "Al que se mueve"
+    },
+    {
+        "id": 36,
+        "nombre": "9",
+        "tipo": "diamantes",
+        "texto": "Al que se mueve"
+    },
+    {
+        "id": 37,
+        "nombre": "10",
+        "tipo": "corazón",
+        "texto": "Historia"
+    },
+    {
+        "id": 38,
+        "nombre": "10",
+        "tipo": "trébol",
+        "texto": "Historia"
+    },
+    {
+        "id": 39,
+        "nombre": "10",
+        "tipo": "espadas",
+        "texto": "Historia"
+    },
+    {
+        "id": 40,
+        "nombre": "10",
+        "tipo": "diamantes",
+        "texto": "Historia"
+    },
+    {
+        "id": 41,
+        "nombre": "J",
+        "tipo": "corazón",
+        "texto": "Izquierda"
+    },
+    {
+        "id": 42,
+        "nombre": "J",
+        "tipo": "trébol",
+        "texto": "Izquierda"
+    },
+    {
+        "id": 43,
+        "nombre": "J",
+        "tipo": "espadas",
+        "texto": "Izquierda"
+    },
+    {
+        "id": 44,
+        "nombre": "J",
+        "tipo": "diamantes",
+        "texto": "Izquierda"
+    },
+    {
+        "id": 45,
+        "nombre": "Q",
+        "tipo": "corazón",
+        "texto": "Derecha"
+    },
+    {
+        "id": 46,
+        "nombre": "Q",
+        "tipo": "trébol",
+        "texto": "Derecha"
+    },
+    {
+        "id": 47,
+        "nombre": "Q",
+        "tipo": "espadas",
+        "texto": "Derecha"
+    },
+    {
+        "id": 48,
+        "nombre": "Q",
+        "tipo": "diamantes",
+        "texto": "Derecha"
+    },
+    {
+        "id": 49,
+        "nombre": "K",
+        "tipo": "corazón",
+        "texto": "Vaso!"
+    },
+    {
+        "id": 50,
+        "nombre": "K",
+        "tipo": "trébol",
+        "texto": "Vaso!"
+    },
+    {
+        "id": 51,
+        "nombre": "K",
+        "tipo": "espadas",
+        "texto": "Vaso!"
+    },
+    {
+        "id": 52,
+        "nombre": "K",
+        "tipo": "diamantes",
+        "texto": "Vaso!"
+    } 
 ]

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Componente, Nivel, VerdadOReto, Piramide, traguito } from '../interfaces/interfaces';
+import { Componente, Nivel, VerdadOReto, Piramide, traguito, circulo } from '../interfaces/interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -26,5 +26,8 @@ export class DataService {
   }
   getTraguito(){
     return this.http.get<traguito[]>('../assets/data/traguito-caliente.json');
+  }
+  getCirculo(){
+    return this.http.get<circulo[]>('../assets/data/circulo.json');
   }
 }

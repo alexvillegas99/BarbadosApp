@@ -40,3 +40,9 @@ export interface traguito {
   tipo: string;
   texto: string;
 }
+export interface circulo{
+  id:number,
+  nombre:string,
+ tipo  :string,
+ texto :string
+}

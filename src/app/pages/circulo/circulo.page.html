@@ -14,60 +14,115 @@
 
   <img src="assets/img/tituloCirculo.png" style="height: 100px; position: absolute; left: 35%; top: 3%;">
   <div class='circle-container'>
+    
+    <!--Cartas boca abajo-->
     <a class='center'><img [src]='centro'></a>
-    <a class='deg0'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg6-92'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg13-84'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg20-04'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg26-96'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg33-88'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg40-8'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg47-72'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg54-64'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg61-56'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg68-48'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg75-4'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg82-32'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg89-24'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg96-16'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg103-08'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg110'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg116-92'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg123-84'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg130-76'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg137-68'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg144-6'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg151-52'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg158-44'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg165-36'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg172-28'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg179-2'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg186-12'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg193-04'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg199-96'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg206-88'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg213-8'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg220-72'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg227-64'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg234-56'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg241-48'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg248-4'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg255-32'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg262-24'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg269-16'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg276-08'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg283'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg289-92'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg296-84'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg303-76'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg310-68'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg317-6'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg324-52'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg331-44'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg338-36'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg345-28'><img [src]='carta' (click)='cambiar()'></a>
-    <a class='deg352-2'><img [src]='carta' (click)='cambiar()'></a>
-
+    <a class='deg0'><img [src]='carta' (click)='cambiar(1)' *ngIf="c1"></a>
+    <a class='deg6-92'><img [src]='carta' (click)='cambiar(2)'  *ngIf="c2"></a>
+    <a class='deg13-84'><img [src]='carta' (click)='cambiar(3)' *ngIf="c3"></a>
+    <a class='deg20-04'><img [src]='carta' (click)='cambiar(4)' *ngIf="c4"></a>
+    <a class='deg26-96'><img [src]='carta' (click)='cambiar(5)' *ngIf="c5"></a>
+    <a class='deg33-88'><img [src]='carta' (click)='cambiar(6)' *ngIf="c6"></a>
+    <a class='deg40-8'><img [src]='carta' (click)='cambiar(7)' *ngIf="c7"></a>
+    <a class='deg47-72'><img [src]='carta' (click)='cambiar(8)' *ngIf="c8"></a>
+    <a class='deg54-64'><img [src]='carta' (click)='cambiar(9)' *ngIf="c9"></a>
+    <a class='deg61-56'><img [src]='carta' (click)='cambiar(10)' *ngIf="c10"></a>
+    <a class='deg68-48'><img [src]='carta' (click)='cambiar(11)' *ngIf="c11"></a>
+    <a class='deg75-4'><img [src]='carta' (click)='cambiar(12)' *ngIf="c12"></a>
+    <a class='deg82-32'><img [src]='carta' (click)='cambiar(13)' *ngIf="c13"></a>
+    <a class='deg89-24'><img [src]='carta' (click)='cambiar(14)' *ngIf="c14"></a>
+    <a class='deg96-16'><img [src]='carta' (click)='cambiar(15)' *ngIf="c15"></a>
+    <a class='deg103-08'><img [src]='carta' (click)='cambiar(16)' *ngIf="c16"></a>
+    <a class='deg110'><img [src]='carta' (click)='cambiar(17)' *ngIf="c17"></a>
+    <a class='deg116-92'><img [src]='carta' (click)='cambiar(18)' *ngIf="c18"></a>
+    <a class='deg123-84'><img [src]='carta' (click)='cambiar(19)' *ngIf="c19"></a>
+    <a class='deg130-76'><img [src]='carta' (click)='cambiar(20)' *ngIf="c20"></a>
+    <a class='deg137-68'><img [src]='carta' (click)='cambiar(21)' *ngIf="c21"></a>
+    <a class='deg144-6'><img [src]='carta' (click)='cambiar(22)' *ngIf="c22"></a>
+    <a class='deg151-52'><img [src]='carta' (click)='cambiar(23)' *ngIf="c23"></a>
+    <a class='deg158-44'><img [src]='carta' (click)='cambiar(24)' *ngIf="c24"></a>
+    <a class='deg165-36'><img [src]='carta' (click)='cambiar(25)' *ngIf="c25"></a>
+    <a class='deg172-28'><img [src]='carta' (click)='cambiar(26)' *ngIf="c26"></a>
+    <a class='deg179-2'><img [src]='carta' (click)='cambiar(27)' *ngIf="c26"></a>
+    <a class='deg186-12'><img [src]='carta' (click)='cambiar(28)' *ngIf="c28"></a>
+    <a class='deg193-04'><img [src]='carta' (click)='cambiar(29)' *ngIf="c29"></a>
+    <a class='deg199-96'><img [src]='carta' (click)='cambiar(30)' *ngIf="c30"></a>
+    <a class='deg206-88'><img [src]='carta' (click)='cambiar(31)' *ngIf="c31"></a>
+    <a class='deg213-8'><img [src]='carta' (click)='cambiar(32)' *ngIf="c32"></a>
+    <a class='deg220-72'><img [src]='carta' (click)='cambiar(33)' *ngIf="c33"></a>
+    <a class='deg227-64'><img [src]='carta' (click)='cambiar(34)' *ngIf="c34"></a>
+    <a class='deg234-56'><img [src]='carta' (click)='cambiar(35)' *ngIf="c35"></a>
+    <a class='deg241-48'><img [src]='carta' (click)='cambiar(36)' *ngIf="c36"></a>
+    <a class='deg248-4'><img [src]='carta' (click)='cambiar(37)' *ngIf="c37"></a>
+    <a class='deg255-32'><img [src]='carta' (click)='cambiar(38)' *ngIf="c38"></a>
+    <a class='deg262-24'><img [src]='carta' (click)='cambiar(39)' *ngIf="c39"></a>
+    <a class='deg269-16'><img [src]='carta' (click)='cambiar(40)' *ngIf="c40"></a>
+    <a class='deg276-08'><img [src]='carta' (click)='cambiar(41)' *ngIf="c41"></a>
+    <a class='deg283'><img [src]='carta' (click)='cambiar(42)' *ngIf="c42"></a>
+    <a class='deg289-92'><img [src]='carta' (click)='cambiar(43)' *ngIf="c43"></a>
+    <a class='deg296-84'><img [src]='carta' (click)='cambiar(44)' *ngIf="c44"></a>
+    <a class='deg303-76'><img [src]='carta' (click)='cambiar(45)' *ngIf="c45"></a>
+    <a class='deg310-68'><img [src]='carta' (click)='cambiar(46)' *ngIf="c46"></a>
+    <a class='deg317-6'><img [src]='carta' (click)='cambiar(47)' *ngIf="c47"></a>
+    <a class='deg324-52'><img [src]='carta' (click)='cambiar(48)' *ngIf="c48"></a>
+    <a class='deg331-44'><img [src]='carta' (click)='cambiar(49)' *ngIf="c49"></a>
+    <a class='deg338-36'><img [src]='carta' (click)='cambiar(50)' *ngIf="c50"></a>
+    <a class='deg345-28'><img [src]='carta' (click)='cambiar(51)' *ngIf="c51"></a>
+    <a class='deg352-2'><img [src]='carta' (click)='cambiar(52)' *ngIf="c52"></a>
+<!--
+    <a class='deg0'><img [src]='carta2'  *ngIf="!c1"></a>
+    <a class='deg6-92'><img [src]='carta2'   *ngIf="!c2"></a>
+    <a class='deg13-84'><img [src]='carta2'  *ngIf="!c3"></a>
+    <a class='deg20-04'><img [src]='carta2' *ngIf="!c4"></a>
+    <a class='deg26-96'><img [src]='carta2' *ngIf="!c5"></a>
+    <a class='deg33-88'><img [src]='carta2' *ngIf="!c6"></a>
+    <a class='deg40-8'><img [src]='carta2'  *ngIf="!c7"></a>
+    <a class='deg47-72'><img [src]='carta2'  *ngIf="!c8"></a>
+    <a class='deg54-64'><img [src]='carta2' *ngIf="!c9"></a>
+    <a class='deg61-56'><img [src]='carta2'  *ngIf="!c10"></a>
+    <a class='deg68-48'><img [src]='carta2'  *ngIf="!c11"></a>
+    <a class='deg75-4'><img [src]='carta2'  *ngIf="!c12"></a>
+    <a class='deg82-32'><img [src]='carta2'  *ngIf="!c13"></a>
+    <a class='deg89-24'><img [src]='carta2'  *ngIf="!c14"></a>
+    <a class='deg96-16'><img [src]='carta2'  *ngIf="!c15"></a>
+    <a class='deg103-08'><img [src]='carta2'  *ngIf="!c16"></a>
+    <a class='deg110'><img [src]='carta2'  *ngIf="!c17"></a>
+    <a class='deg116-92'><img [src]='carta2'  *ngIf="!c18"></a>
+    <a class='deg123-84'><img [src]='carta2'  *ngIf="!c19"></a>
+    <a class='deg130-76'><img [src]='carta2'  *ngIf="!c20"></a>
+    <a class='deg137-68'><img [src]='carta2' *ngIf="!c21"></a>
+    <a class='deg144-6'><img [src]='carta2'  *ngIf="!c22"></a>
+    <a class='deg151-52'><img [src]='carta2'  *ngIf="!c23"></a>
+    <a class='deg158-44'><img [src]='carta2'  *ngIf="!c24"></a>
+    <a class='deg165-36'><img [src]='carta2'  *ngIf="!c25"></a>
+    <a class='deg172-28'><img [src]='carta2'  *ngIf="!c26"></a>
+    <a class='deg179-2'><img [src]='carta2'  *ngIf="!c26"></a>
+    <a class='deg186-12'><img [src]='carta2'  *ngIf="!c28"></a>
+    <a class='deg193-04'><img [src]='carta2'  *ngIf="!c29"></a>
+    <a class='deg199-96'><img [src]='carta2'  *ngIf="!c30"></a>
+    <a class='deg206-88'><img [src]='carta2'  *ngIf="!c31"></a>
+    <a class='deg213-8'><img [src]='carta2'  *ngIf="!c32"></a>
+    <a class='deg220-72'><img [src]='carta2'  *ngIf="!c33"></a>
+    <a class='deg227-64'><img [src]='carta2'  *ngIf="!c34"></a>
+    <a class='deg234-56'><img [src]='carta2'  *ngIf="!c35"></a>
+    <a class='deg241-48'><img [src]='carta2'  *ngIf="!c36"></a>
+    <a class='deg248-4'><img [src]='carta2'  *ngIf="!c37"></a>
+    <a class='deg255-32'><img [src]='carta2'  *ngIf="!c38"></a>
+    <a class='deg262-24'><img [src]='carta2'  *ngIf="!c39"></a>
+    <a class='deg269-16'><img [src]='carta2'  *ngIf="!c40"></a>
+    <a class='deg276-08'><img [src]='carta2'  *ngIf="!c41"></a>
+    <a class='deg283'><img [src]='carta2'  *ngIf="!c42"></a>
+    <a class='deg289-92'><img [src]='carta2' *ngIf="!c43"></a>
+    <a class='deg296-84'><img [src]='carta2' *ngIf="!c44"></a>
+    <a class='deg303-76'><img [src]='carta2' *ngIf="!c45"></a>
+    <a class='deg310-68'><img [src]='carta2' *ngIf="!c46"></a>
+    <a class='deg317-6'><img [src]='carta2' *ngIf="!c47"></a>
+    <a class='deg324-52'><img [src]='carta2' *ngIf="!c48"></a>
+    <a class='deg331-44'><img [src]='carta2' *ngIf="!c49"></a>
+    <a class='deg338-36'><img [src]='carta2' *ngIf="!c50"></a>
+    <a class='deg345-28'><img [src]='carta2' *ngIf="!c51"></a>
+    <a class='deg352-2'><img [src]='carta2' *ngIf="!c52"></a>
+    -->
   </div>
 
 </ion-content>

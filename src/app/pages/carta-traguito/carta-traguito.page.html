@@ -1,0 +1,22 @@
+<ion-content color="mycolor2" class="ion-padding">
+  <ion-slides pager="ios" class="slide-full"  [options]="slideOpts">
+    <ion-slide>
+      
+       <ion-img [src]="imagen"></ion-img>
+      
+       <ion-card-content style="padding-left: 20%; padding-right: 20%;">
+      <label class="pregunta"><h1 style="font-weight: bold;">{{circulo.texto}}</h1></label>
+      <ion-img class="tipo1" [src]="tipo"></ion-img>
+      <ion-img class="numero1" [src]="numero"></ion-img>
+      <ion-img class="tipo2" [src]="tipo"></ion-img>
+      <ion-img class="numero2" [src]="numero"></ion-img>
+       </ion-card-content>
+   
+    </ion-slide>
+    <button (click)="cerrarModal()" expand="block" class="btn-3d">
+      Siguiente
+    </button>
+  
+  </ion-slides>
+
+</ion-content>
