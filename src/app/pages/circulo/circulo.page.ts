@@ -20,6 +20,9 @@ export class CirculoPage implements OnInit {
       this.ocultarSlider=true;
     }, 4000);
   }
+  async cambiar(){
+    
+  }
   async modal(){
     const modal = await this.modalCtrl.create({
       component: ModalInfoPage
