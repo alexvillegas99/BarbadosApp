@@ -2,6 +2,7 @@ export interface Componente {
     icon: string;
     name: string;
     redirectTo: string;
+    img:string;
   }
 
 export interface VerdadOReto {
@@ -22,6 +23,7 @@ export interface Pregunta {
 export interface Nivel {
   nivel: string;
   selected: boolean;
+  imagen:string;
 }
 export interface Jugadores { 
   nombre: string;
