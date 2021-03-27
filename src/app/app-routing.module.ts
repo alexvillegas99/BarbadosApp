@@ -47,7 +47,11 @@ const routes: Routes = [
   {
     path: 'carta-traguito',
     loadChildren: () => import('./pages/carta-traguito/carta-traguito.module').then( m => m.CartaTraguitoPageModule)
+  },  {
+    path: 'carta',
+    loadChildren: () => import('./pages/carta/carta.module').then( m => m.CartaPageModule)
   }
+
 ];
 
 @NgModule({
