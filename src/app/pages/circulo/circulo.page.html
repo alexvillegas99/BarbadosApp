@@ -10,14 +10,13 @@
   </ion-toolbar>
 </ion-header>
 <ion-content color="mycolor2">
-  <!-- <app-carga *ngIf="!ocultarSlider"></app-carga> -->
-
-  <img src="assets/img/tituloCirculo.png" style="height: 100px; position: absolute; left: 35%; top: 3%;">
-  <div class='circle-container'>
+  <app-carga *ngIf="!ocultarSlider"></app-carga>
+  <img *ngIf="ocultarSlider" src="assets/img/tituloCirculo.png" style="height: 100px; position: absolute; left: 35%; top: 3%;">
+  <div class='circle-container' *ngIf="ocultarSlider">
     
     <!--Cartas boca abajo-->
     <a class='center'><img [src]='centro'></a>
-    <a class='deg0'><img [src]='carta' (click)='cambiar(1)' *ngIf="c1"></a>
+ <!--  <a class='deg0'><img [src]='carta' (click)='cambiar(1)' *ngIf="c1"></a>--> 
     <a class='deg6-92'><img [src]='carta' (click)='cambiar(2)'  *ngIf="c2"></a>
     <a class='deg13-84'><img [src]='carta' (click)='cambiar(3)' *ngIf="c3"></a>
     <a class='deg20-04'><img [src]='carta' (click)='cambiar(4)' *ngIf="c4"></a>
@@ -43,7 +42,7 @@
     <a class='deg158-44'><img [src]='carta' (click)='cambiar(24)' *ngIf="c24"></a>
     <a class='deg165-36'><img [src]='carta' (click)='cambiar(25)' *ngIf="c25"></a>
     <a class='deg172-28'><img [src]='carta' (click)='cambiar(26)' *ngIf="c26"></a>
-    <a class='deg179-2'><img [src]='carta' (click)='cambiar(27)' *ngIf="c26"></a>
+    <a class='deg179-2'><img [src]='carta' (click)='cambiar(27)' *ngIf="c27"></a>
     <a class='deg186-12'><img [src]='carta' (click)='cambiar(28)' *ngIf="c28"></a>
     <a class='deg193-04'><img [src]='carta' (click)='cambiar(29)' *ngIf="c29"></a>
     <a class='deg199-96'><img [src]='carta' (click)='cambiar(30)' *ngIf="c30"></a>
@@ -69,6 +68,9 @@
     <a class='deg338-36'><img [src]='carta' (click)='cambiar(50)' *ngIf="c50"></a>
     <a class='deg345-28'><img [src]='carta' (click)='cambiar(51)' *ngIf="c51"></a>
     <a class='deg352-2'><img [src]='carta' (click)='cambiar(52)' *ngIf="c52"></a>
+    <div style="text-align: center;">
+      <button expand="block" (click)="reiniciarJuego()" *ngIf="reiniciar" style="margin-top:140%; width: 75%;"   class="btn-3d">Reiniciar</button>
+      </div>
 <!--
     <a class='deg0'><img [src]='carta2'  *ngIf="!c1"></a>
     <a class='deg6-92'><img [src]='carta2'   *ngIf="!c2"></a>

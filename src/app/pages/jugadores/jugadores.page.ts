@@ -16,6 +16,7 @@ export class JugadoresPage implements OnInit {
   genero='';
  imgHombre="/assets/img/triton.png";
  imgMujer="/assets/img/sirena.png";
+ mensaje='';
   constructor(
               private dataLocalService:DataLocalService,
               private navCtrl:NavController,
@@ -53,16 +54,10 @@ export class JugadoresPage implements OnInit {
       this.genero="";
       this.imgHombre="/assets/img/triton.png";
  this.imgMujer="/assets/img/sirena.png";
+ this.mensaje='';
     }else{
-      const alert = await this.alertCtrl.create({
-        cssClass:'ion-alert',
-        header: 'Información',
-        message: 'Ingrese un nick y seleccione su género',
-        buttons: [
-        {text:'Aceptar', role:'cancel'}]
-      });
-  
-      await alert.present();
+     this.mensaje= 'Ingrese un nick y seleccione su género'
+     
     }
     
   }
@@ -72,16 +67,10 @@ export class JugadoresPage implements OnInit {
     if(this.jugadores.length>1){
       this.dataLocalService.setJugadores(this.jugadores);
       this.navCtrl.navigateForward(`/traguito-caliente`);
+      this.mensaje='';
   }else{
-    const alert = await this.alertCtrl.create({
-      cssClass:'ion-alert',
-      header: 'Información',
-      message: 'Minimo 2 jugadores',
-      buttons: [
-      {text:'Aceptar', role:'cancel'}]
-    });
+   this.mensaje= 'Minimo 2 jugadores';
 
-    await alert.present();
   }
   
   }

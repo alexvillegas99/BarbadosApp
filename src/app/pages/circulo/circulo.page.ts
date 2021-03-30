@@ -12,6 +12,8 @@ import { DataService } from '../../services/data.service';
 })
 export class CirculoPage implements OnInit {
   //Declaracion de variables para cada carta.
+  reiniciar=false;
+  contador=0;
   c1 = true;
   c2 = true;
   c3 = true;
@@ -90,6 +92,24 @@ export class CirculoPage implements OnInit {
      this.Cartas = await this.Cartas.filter(pre =>
       pre.id!==this.enviar.id
     )
+    if(this.Cartas.length===0){
+      this.reiniciar=true;
+    }
+    //
+
+    if(this.enviar.nombre==='K'){
+this.contador++;
+if(this.contador===1){
+  this.centro = '/assets/Botella/k1.png';
+}else if(this.contador===2){
+  this.centro = '/assets/Botella/k2.png';
+}else if(this.contador==3){
+  this.centro = '/assets/Botella/k3.png';
+}else if(this.contador==4){
+  this.centro = '/assets/Botella/k4.png';
+  this.enviar.texto='Sacaste la cuarta K toma vaso lleno!!';
+}
+    }
     const modal = await this.modalCtrl.create({
       component: CartaTraguitoPage,
       componentProps: {
@@ -159,5 +179,64 @@ export class CirculoPage implements OnInit {
     });
     return await modal.present();
   }
-
+async reiniciarJuego(){
+  this.reiniciar=false;
+  this.centro = '/assets/Botella/k0.png'
+this.contador==0;
+this.dataService.getCirculo().subscribe(resp=>{
+  this.Cartas=resp;
+})
+this.c1 = true;
+this.c2 = true;
+this.c3 = true;
+this.c4 = true;
+this.c5 = true;
+this.c6 = true;
+this.c7 = true;
+this.c8 = true;
+this.c9 = true;
+this.c10 =true;
+this.c11= true;
+this.c12 =true;
+this.c13 =true;
+this.c14 =true;
+this.c15 =true;
+this.c16 =true;
+this.c17 =true;
+this.c18 =true;
+this.c19 =true;
+this.c20 =true;
+this.c21 =true;
+this.c22 =true;
+this.c23 =true;
+this.c24 =true;
+this.c25 =true;
+this.c26 =true;
+this.c27 =true;
+this.c28 =true;
+this.c29 =true;
+this.c30 =true;
+this.c31 =true;
+this.c32 =true;
+this.c33 =true;
+this.c34 =true;
+this.c35 =true;
+this.c36 =true;
+this.c37 =true;
+this.c38 =true;
+this.c39 =true;
+this.c40 =true;
+this.c41 =true;
+this.c42 =true;
+this.c43 =true;
+this.c44 =true;
+this.c45 =true;
+this.c46 =true;
+this.c47 =true;
+this.c48 =true;
+this.c49 =true;
+this.c50 =true;
+this.c51 =true;
+this.c52 =true;
+}
 }

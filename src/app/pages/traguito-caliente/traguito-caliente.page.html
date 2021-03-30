@@ -1,23 +1,24 @@
 <ion-header>
   <ion-toolbar color="mycolor">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/inicio" color="texto"></ion-back-button>
+      <ion-back-button defaultHref="/" color="texto"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
+    <ion-title class="ion-text-capitalize"><label>Jugadores</label></ion-title>
     <ion-button slot="end" (click)="modal()" fill="clear">
       <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
     </ion-button>
   </ion-toolbar>
 </ion-header>
 <ion-content color="mycolor2">
-  <app-carga *ngIf="!ocultarSlider"></app-carga>
-  <ion-slides pager="ios" class="slide-full" *ngIf="ocultarSlider">
+  <app-carga *ngIf="!ocultarSlider"></app-carga> 
+  <ion-slides pager="ios" class="slide-full" *ngIf="ocultarSlider && !final">
     <ion-slide>
 
       <ion-img [src]="imagen" style="top: -200;"></ion-img>
+      <div style="text-align: center;">
         <ion-card-header>
-          <ion-card-subtitle style="margin-top: -100px;"> <label>
-              <h2>{{jugadorActual.nombre}}</h2>
+          <ion-card-subtitle style="margin-top: -90px;"> <label>
+              <h2 style="font-weight: bold;">{{jugadorActual.nombre}}</h2>
             </label></ion-card-subtitle>
         </ion-card-header>
         <ion-card-content style="padding-left: 20%; padding-right: 20%;">
@@ -25,12 +26,32 @@
             <h2 style="font-weight: bold;">{{PreguntaActual.texto}}</h2>
           </label>
         </ion-card-content>
-
+      </div>
     </ion-slide>
     <button (click)="jugar()" style="width: 75%;left: 13%;"  class="btn-3d">
       Siguiente
     </button>
   </ion-slides>
+  <ion-slides pager="ios" class="slide-full" *ngIf="final" [options]='slideOpts'>
+    <ion-slide>
 
+      <ion-img [src]="imagen" style="top: -200;"></ion-img>
+      <div style="text-align: center;">
+        <ion-card-header>
+          <ion-card-subtitle style="margin-top: -90px;"> <label>
+              <h2 style="font-weight: bold;">Fin del juego</h2>
+            </label></ion-card-subtitle>
+        </ion-card-header>
+     <ion-card-content>
+      
+      <button (click)="reiniciarJuego()" style="left: 0%;" class="btn-3d">
+        Reiniciar
+      </button>
+     </ion-card-content>
+       
+      </div>
+    </ion-slide>
+    
+  </ion-slides>
 
 </ion-content>

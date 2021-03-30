@@ -25,9 +25,9 @@
 <ion-img  class="ruleta" [src]="imgRuleta"></ion-img>
 <ion-img class="imgBotella" [ngClass]="{rotarImagen: rotarImg, desafio: desafio,verdad: verdad}"  [src]="botella"></ion-img>
 <br>
-
+<div style="text-align: center;">
 <button expand="block" (click)="ruleta()" style="margin-top:140%; width: 75%;"   class="btn-3d">Girar</button>
-
+</div>
 </div>
  <!--Mostrar la verdad o el reto-->
   <ion-slides pager="ios" class="slide-full" *ngIf="!ocultarSlider && !final && !rotacion">

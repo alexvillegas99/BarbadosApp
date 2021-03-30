@@ -1,6 +1,12 @@
 
-
-
+ion-content {
+    // overwrite inline styles
+    --overflow: hidden;
+    overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 ion-grid{
     width: 100%;
     height: 100%;

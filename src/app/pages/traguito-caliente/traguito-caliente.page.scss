@@ -1,6 +1,7 @@
 
 .slide-full {
-    height: 100% !important;
+    height: 100% !important; 
+    position: relative;
    
 }
 ion-img {
@@ -25,4 +26,55 @@ label{
 }
 h2{
     color: black !important;
+}
+//
+ion-card {
+    overflow: unset !important;
+    background: #845899;
+}
+
+ion-card {
+    position: fixed;
+    height: 300px;
+    width: 300px;
+}
+.ion-card {
+    position: fixed;
+    height: 250px;
+    width: 250px;
+}
+.tipo{
+    top: -300px;
+}
+.slide-image {
+    width: 150px;
+    text-align: center;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    position: relative;
+    top: -50px;
+}
+
+
+.avatar {
+    width: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.btn-continuar{
+    margin-top: 15px;
+}
+.header {
+    position: relative;
+    top: -50px;
+}
+
+.content {
+    position: relative;
+    top: -50px;
+    height: 100px;
 }

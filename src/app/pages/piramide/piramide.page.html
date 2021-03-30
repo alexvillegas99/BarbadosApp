@@ -133,5 +133,11 @@
         <ion-img [src]="imgCartaVolteada" *ngIf="c21"></ion-img>
       </ion-col>
     </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <button expand="block" (click)="reiniciarJuego()" *ngIf="reiniciar"   class="btn-3d">Reiniciar</button>
+      </ion-col>
+    </ion-row>
   </ion-grid>
+  
 </ion-content>

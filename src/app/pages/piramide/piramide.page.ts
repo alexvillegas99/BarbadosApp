@@ -19,12 +19,13 @@ export class PiramidePage implements OnInit {
   fila4: Piramide[] = [];
   fila5: Piramide[] = [];
   fila6: Piramide[] = [];
+  reiniciar = false;
   //
   constructor(public modalCtrl: ModalController,
     private nativeAudio: NativeAudio,
     private dataService: DataService) { }
   ionViewWillEnter() {
-    this.nativeAudio.preloadSimple('uno', 'assets/audios/audio01.mp3');
+    //   this.nativeAudio.preloadSimple('uno', 'assets/audios/audio01.mp3');
   }
   mostrar = false;
   ngOnInit() {
@@ -93,7 +94,7 @@ export class PiramidePage implements OnInit {
   imgCartaVolteada = "/assets/img/carta-v.png";
 
   async activarCartas() {
-    
+
     if (this.c16 && this.c17 && this.c18 && this.c19 && this.c20 && this.c21) {
       this.activar5 = true;
     }
@@ -109,54 +110,57 @@ export class PiramidePage implements OnInit {
     if (this.c2 && this.c3) {
       this.activar1 = true;
     }
+    if (this.c1) {
+      this.reiniciar = true;
+    }
   }
   async presentModal(carta) {
-    this.nativeAudio.play('uno');
-    let enviar='';
-    if(carta>=16 && carta<=21){
+    // this.nativeAudio.play('uno');
+    let enviar = '';
+    if (carta >= 16 && carta <= 21) {
       let fin = this.fila6.length;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
-      enviar= this.fila6[pos].texto;
+      enviar = this.fila6[pos].texto;
       this.fila6 = this.fila6.filter(pre =>
         pre.texto !== enviar
       )
     }
-    if(carta>=11 && carta<=15){
+    if (carta >= 11 && carta <= 15) {
       let fin = this.fila5.length;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
-      enviar= this.fila5[pos].texto;
+      enviar = this.fila5[pos].texto;
       this.fila5 = this.fila5.filter(pre =>
         pre.texto !== enviar
       )
     }
-    if(carta>=7 && carta<=10){
+    if (carta >= 7 && carta <= 10) {
       let fin = this.fila4.length;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
-      enviar= this.fila4[pos].texto;
+      enviar = this.fila4[pos].texto;
       this.fila4 = this.fila4.filter(pre =>
         pre.texto !== enviar
       )
     }
-    if(carta>=4 && carta<=6){
+    if (carta >= 4 && carta <= 6) {
       let fin = this.fila3.length;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
-      enviar= this.fila3[pos].texto;
+      enviar = this.fila3[pos].texto;
       this.fila3 = this.fila3.filter(pre =>
         pre.texto !== enviar
       )
     }
-    if(carta>=2 && carta<=3){
+    if (carta >= 2 && carta <= 3) {
       let fin = this.fila2.length;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
-      enviar= this.fila2[pos].texto;
+      enviar = this.fila2[pos].texto;
       this.fila2 = this.fila2.filter(pre =>
         pre.texto !== enviar
       )
     }
-    if(carta==1){ 
+    if (carta == 1) {
       let fin = this.fila1.length;
       let pos = await Math.round(Math.random() * (fin - 0) + 0);
-      enviar= this.fila1[pos].texto;
+      enviar = this.fila1[pos].texto;
       this.fila1 = this.fila1.filter(pre =>
         pre.texto !== enviar
       )
@@ -227,5 +231,37 @@ export class PiramidePage implements OnInit {
       component: ModalInfoPage
     });
     return await modal.present();
+  }
+  reiniciarJuego() {
+
+    this.reiniciar = false;
+    this.getDatosPiramide();
+    this.activar5 = false;
+    this.activar4 = false;
+    this.activar3 = false;
+    this.activar2 = false;
+    this.activar1 = false;
+    //Cartas
+    this.c1 = false;
+    this.c2 = false;
+    this.c3 = false;
+    this.c4 = false;
+    this.c5 = false;
+    this.c6 = false;
+    this.c7 = false;
+    this.c8 = false;
+    this.c9 = false;
+    this.c10 = false;
+    this.c11 = false;
+    this.c12 = false;
+    this.c13 = false;
+    this.c14 = false;
+    this.c15 = false;
+    this.c16 = false;
+    this.c17 = false;
+    this.c18 = false;
+    this.c19 = false;
+    this.c20 = false;
+    this.c21 = false;
   }
 }

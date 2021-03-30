@@ -15,6 +15,12 @@ export class TraguitoCalientePage implements OnInit {
   PreguntasH: traguito[] = [];
   PreguntasM: traguito[] = [];
   PreguntasT: traguito[] = [];
+  JugadoresAux:Jugadores[]=[];
+  slideOpts = {
+    allowSlidePrev: false,
+    allowSlideNext: false
+  }
+  final=false;
   generos=1;
   genero='';
   jugadorActual: Jugadores={
@@ -31,7 +37,6 @@ export class TraguitoCalientePage implements OnInit {
     texto: ''
   };
   cont = 0;
-  fin: boolean = false;
   constructor(private modalCtrl: ModalController,
     private dataService: DataService,
     private dataLocalService:DataLocalService) { }
@@ -47,6 +52,7 @@ export class TraguitoCalientePage implements OnInit {
         this.generos=2;
       }
     })
+    this.JugadoresAux=this.Jugadores;
     if(this.generos==1){
     this.genero==this.Jugadores[0].genero;
     }
@@ -82,7 +88,7 @@ export class TraguitoCalientePage implements OnInit {
   async jugar() {
     //Verificamos que existan elementos en los array
     if (this.Jugadores.length===0) {
-      this.fin = true;
+      this.final = true;
     } else {
       //Selecionar el jugador
       if(this.cont===this.Jugadores.length){
@@ -139,6 +145,12 @@ export class TraguitoCalientePage implements OnInit {
         } 
       }
     }
+  }
+  async reiniciarJuego(){
+    this.final=false;
+    this.Jugadores=this.JugadoresAux;
+    this.getPreguntas();
+    this.jugar();
   }
 }
 
