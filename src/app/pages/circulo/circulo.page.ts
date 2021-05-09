@@ -175,7 +175,13 @@ if(this.contador===1){
   }
   async modal() {
     const modal = await this.modalCtrl.create({
-      component: ModalInfoPage
+      component: ModalInfoPage,
+      componentProps: {
+        'informacion': 'El objetivo de este juego es chumarce con una botella de Barbados 1569 los jugadores'+
+        'designaran un juez, el jugador con los ojos mas claros sera conocido como el mas gato,'+
+        'el jugador de menor edad sera conocido como el mas morocho luego de designar los roles'+
+        'los jugadores se pasaran el teléfono de izquierda a derecha y escogerán una carta.'
+      }
     });
     return await modal.present();
   }

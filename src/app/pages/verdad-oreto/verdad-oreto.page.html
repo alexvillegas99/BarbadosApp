@@ -19,16 +19,16 @@
   <!--Pantalla de carga solo se muetra una vez-->
  <app-carga *ngIf="ocultarSlider"></app-carga>
 <!--Aqui sera para que rote la cosa-->
-<div style=" position: relative; height: 100%; width: 100%;" *ngIf="rotacion && !ocultarSlider" >
+<div class="centrar" *ngIf="rotacion && !ocultarSlider" >
   
   <img src="assets/img/vod.png" style="height: 100px; position: absolute; left: 27%; top: 3%;"  >
 <ion-img  class="ruleta" [src]="imgRuleta"></ion-img>
-<ion-img class="imgBotella" [ngClass]="{rotarImagen: rotarImg, desafio: desafio,verdad: verdad}"  [src]="botella"></ion-img>
-<br>
-<div style="text-align: center;">
-<button expand="block" (click)="ruleta()" style="margin-top:140%; width: 75%;"   class="btn-3d">Girar</button>
+<ion-img class="imgBotella" [ngClass]="{rotarImagen: rotarImg, desafio4: desafio4,verdad1: verdad1,
+  desafio1: desafio1,verdad4: verdad4,verdad2:verdad2,desafio2:desafio2}"  [src]="botella"></ion-img>
 </div>
-</div>
+<div style="text-align: center;" *ngIf="rotacion && !ocultarSlider">
+  <button expand="block" (click)="ruleta()" style=" width: 75%;"   class="btn-3d">Girar</button>
+  </div>
  <!--Mostrar la verdad o el reto-->
   <ion-slides pager="ios" class="slide-full" *ngIf="!ocultarSlider && !final && !rotacion">
     <ion-button class="info" slot="icon-only" >

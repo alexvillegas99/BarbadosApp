@@ -228,7 +228,16 @@ export class PiramidePage implements OnInit {
   }
   async modal() {
     const modal = await this.modalCtrl.create({
-      component: ModalInfoPage
+      component: ModalInfoPage,
+      componentProps: {
+        'informacion': 'Bienvenido. La piramide 1569 tiene 6 niveles, '+
+        'cada uno de ellos tiene una intensidad, '+
+        'para ir avanzando libera todas las cartas de la fila '+
+        'empezando por el final, los jugadores presentes '+
+        'pasaran su telefono de izquierda a derecha y cumpliran '+
+        'con lo que diga la carta. '+
+        '(El Jugador que vio este mensaje bebe un shot!) '
+      }
     });
     return await modal.present();
   }

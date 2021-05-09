@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ModalInfoPage } from '../modal-info/modal-info.page';
 import { Jugadores, traguito } from '../../interfaces/interfaces';
 import { DataLocalService } from '../../services/data-local.service';
 import { DataService } from '../../services/data.service';
@@ -37,7 +36,7 @@ export class TraguitoCalientePage implements OnInit {
     texto: ''
   };
   cont = 0;
-  constructor(private modalCtrl: ModalController,
+  constructor(
     private dataService: DataService,
     private dataLocalService:DataLocalService) { }
   ocultarSlider = false;
@@ -79,12 +78,7 @@ export class TraguitoCalientePage implements OnInit {
     })
   }
 
-  async modal() {
-    const modal = await this.modalCtrl.create({
-      component: ModalInfoPage
-    });
-    return await modal.present();
-  }
+
   async jugar() {
     //Verificamos que existan elementos en los array
     if (this.Jugadores.length===0) {

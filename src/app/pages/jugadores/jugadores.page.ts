@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DataLocalService } from '../../services/data-local.service';
-import { NavController } from '@ionic/angular';
+import { NavController, ModalController } from '@ionic/angular';
 import { Jugadores } from '../../interfaces/interfaces';
 import { AlertController } from '@ionic/angular';
+import { ModalInfoPage } from '../modal-info/modal-info.page';
 @Component({
   selector: 'app-jugadores',
   templateUrl: './jugadores.page.html',
@@ -16,11 +17,11 @@ export class JugadoresPage implements OnInit {
   genero='';
  imgHombre="/assets/img/triton.png";
  imgMujer="/assets/img/sirena.png";
- mensaje='';
   constructor(
               private dataLocalService:DataLocalService,
               private navCtrl:NavController,
-              private alertCtrl:AlertController) { }
+              private alertCtrl:AlertController,
+              private modalCtrl:ModalController) { }
 
   ngOnInit() {
    // console.log(this.tipo);
@@ -54,10 +55,8 @@ export class JugadoresPage implements OnInit {
       this.genero="";
       this.imgHombre="/assets/img/triton.png";
  this.imgMujer="/assets/img/sirena.png";
- this.mensaje='';
     }else{
-     this.mensaje= 'Ingrese un nick y seleccione su género'
-     
+     this.presentAlert('Ingrese un nick y seleccione su género');
     }
     
   }
@@ -67,11 +66,28 @@ export class JugadoresPage implements OnInit {
     if(this.jugadores.length>1){
       this.dataLocalService.setJugadores(this.jugadores);
       this.navCtrl.navigateForward(`/traguito-caliente`);
-      this.mensaje='';
+   
   }else{
-   this.mensaje= 'Minimo 2 jugadores';
-
+   this.presentAlert('Minimo 2 jugadores');
   }
   
   }
+   async presentAlert(mensaje:string) {
+      const alert = await this.alertCtrl.create({
+        header: 'Información',
+        
+        message: mensaje,
+        buttons: ['Aceptar'],
+        mode:'ios'
+      });
+  
+      await alert.present();
+      
+}
+async modal() {
+  const modal = await this.modalCtrl.create({
+    component: ModalInfoPage
+  });
+  return await modal.present();
+}
 }

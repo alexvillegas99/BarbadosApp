@@ -1,49 +1,48 @@
 <ion-header>
-<ion-toolbar color="mycolor">
-  <ion-buttons 
-  slot="start">
-    <ion-back-button 
-    defaultHref="/inicio"
-    color="texto"
-    ></ion-back-button>
-  </ion-buttons>
-  <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
-</ion-toolbar>
-</ion-header>
-<ion-content class="ion-padding" color="mycolor2">
-<input type="" class="myinput"  color="texto" placeholder="Nickname" [(ngModel)]="nombrejugador"/>
-<ion-grid fixed>
-  <ion-row style="text-align: center;">
-    <ion-col size="6">
-      <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('Masculino')">
-          <ion-img [src]="imgHombre"></ion-img>
-      </ion-button>
-     
-    </ion-col>
-    <ion-col size="6">
-      <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('Femenino')"> 
-      <ion-img [src]="imgMujer"></ion-img>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/inicio" color="texto"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize"><label>Inicio</label></ion-title>
+    <ion-button slot="end" (click)="modal()" fill="clear">
+      <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
     </ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-  <button expand="block" class="btn-3d" (click)="agregarJugador()" text-center>Añadir Jugador</button>
-<h1 style="text-align: center;">{{mensaje}}</h1>
-<ion-list color="mycolor2" class="ion-no-border" class="ion-no-padding">
-  <ion-list-header text-center color="mycolor2"> 
-    <ion-label color="texto" style="text-align: center;"><h1 >Jugadores</h1></ion-label>
-    
-  </ion-list-header>
-  <ion-item *ngFor="let jugador of jugadores" color="mycolor2">
-    <ion-label  color="texto">
-      <H2>Nombre: {{jugador.nombre}}       Género:   {{jugador.genero}}</H2></ion-label>
-    
-      <button class="btn-icon"  (click)="eliminarJugador(jugador.nombre)">
-        <ion-icon slot="end" name="trash" color="mycolor"></ion-icon>
-      </button>
-   
-  </ion-item>
-</ion-list>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" color="mycolor2" mode='ios'>
+  <input type="" class="myinput" mode='ios' color="texto" placeholder="Nickname" [(ngModel)]="nombrejugador" />
+  <ion-grid fixed>
+    <ion-row style="text-align: center;">
+      <ion-col size="6">
+        <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('Masculino')">
+          <ion-img [src]="imgHombre"></ion-img>
+        </ion-button>
 
-<button expand="block" class="btn-3d" (click)="cargarPartida()" text-center >JUGAR</button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button class="cont-img" color="mycolor2" (click)="cambiarGenero('Femenino')">
+          <ion-img style="border: 1rem; " [src]="imgMujer"></ion-img>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button expand="block" class="btn-3d" (click)="agregarJugador()" text-center>Añadir Jugador</button>
+
+  <ion-list color="mycolor2" *ngIf="jugadores.length>0" style="background-color: #07d2f2 !important;"
+    class="ion-no-border" class="ion-no-padding">
+    <ion-list-header text-center color="mycolor2">
+      <ion-label color="texto" style="text-align: center; font-size: 2rem;">Jugadores</ion-label>
+    </ion-list-header>
+    <ion-item *ngFor="let jugador of jugadores" color="mycolor2">
+      <ion-label color="texto" style="font-size: 2rem;">
+        {{jugador.nombre}} </ion-label>
+
+      <button class="btn-icon" (click)="eliminarJugador(jugador.nombre)">
+        <ion-icon slot="end" name="close-outline" color="mycolor"></ion-icon>
+      </button>
+
+    </ion-item>
+  </ion-list>
+
+  <button expand="block" class="btn-3d" (click)="cargarPartida()" *ngIf="jugadores.length>0" text-center>JUGAR</button>
 </ion-content>

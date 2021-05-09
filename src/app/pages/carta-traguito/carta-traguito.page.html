@@ -1,15 +1,24 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-title class="ion-text-capitalize" text-center><label>Circulo ¿Te Atreves?</label></ion-title>
+    <ion-button slot="end" (click)="cambiar()"  fill="clear">
+      <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
 <ion-content color="mycolor2" class="ion-padding">
-  <ion-slides pager="ios" class="slide-full"  [options]="slideOpts">
+  <ion-slides *ngIf="!mostrar && ocultarSlider" pager="ios" class="slide-full"  [options]="slideOpts">
+  
     <ion-slide>
-      
-       <ion-img [src]="imagen"></ion-img>
+    
+       <ion-img class="img-1" [src]="imagen"></ion-img>
       
        <ion-card-content style="padding-left: 20%; padding-right: 20%;">
       <label class="pregunta"><h1 style="font-weight: bold;">{{circulo.texto}}</h1></label>
-      <ion-img class="tipo1" [src]="tipo"></ion-img>
-      <ion-img class="numero1" [src]="numero"></ion-img>
-      <ion-img class="tipo2" [src]="tipo"></ion-img>
-      <ion-img class="numero2" [src]="numero"></ion-img>
+      <ion-img  class="tipo1 img-1" [src]="tipo"></ion-img>
+      <ion-img class="numero1 img-1" [src]="numero"></ion-img>
+      <ion-img class="tipo2 img-1" [src]="tipo"></ion-img>
+      <ion-img class="numero2 img-1" [src]="numero"></ion-img>
        </ion-card-content>
    
     </ion-slide>
@@ -18,5 +27,22 @@
     </button>
   
   </ion-slides>
-
+<ion-slides *ngIf="mostrar"  pager="ios" class="slide-full"  [options]="slideOpts">
+  <ion-slide>
+  
+    <ion-card mode="ios"class='ion-card'>
+    
+      <ion-img [src]="imagen2" class="slide-image2"></ion-img> 
+      
+      
+      <br>
+      <ion-card-content class="ion-card-content "  style=" margin-top: -140px;" >
+       <label style="font-size: 1.2rem; text-align: justify !important;">  {{informacion}}</label>
+      </ion-card-content>
+      <br>
+     
+    </ion-card> 
+   </ion-slide>
+   <button expand="block" (click)="cambiar()" class="btn-3d">Entendido!</button>
+ </ion-slides>
 </ion-content>

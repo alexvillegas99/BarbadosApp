@@ -11,55 +11,76 @@
   
 }
 .imgBotella{ 
-    position:absolute;
     height:30%;
     width:30%;
-    margin-left: 25.5%;
-    margin-top: 60%;
-    left : 40px;
-    z-index: 1;
-}
-.ruleta{
-    position:absolute;
-    height:60%;
-    width:80%;
-    margin-left:10%;
-    margin-top: 35%;
-    z-index: -1;
-}
-.verdad{
-    position:absolute;
-    height:30%;
-    width:30%;
-    margin-left: 25.5%;
-    margin-top: 60%;
-    left : 40px;
-    z-index: 1;
-    transform: rotate(12deg) !important;
-}
-.desafio{
-    position:absolute;
-    height:30%;
-    width:30%;
-    margin-left: 25.5%;
-    margin-top: 60%;
-    left : 40px;
-    z-index: 1;
-    transform: rotate(150deg) !important;
+    position: absolute;
+    top: 25%;
 }
 .rotarImagen{
     position:absolute;
     height:30%;
     width:30%;
-    margin-left: 25.5%;
-    margin-top: 60%;
-    left : 40px;
-    z-index: 1;
-   -webkit-animation: spin 1s linear infinite;
-    -moz-animation: spin 1s linear infinite ;
-    animation: spin 1s linear infinite;
+    top: 25%;
+   -webkit-animation: spin 0.5s linear infinite;
+    -moz-animation: spin 0.5s linear infinite ;
+    animation: spin 0.5s linear infinite;
     
 }
+.ruleta{
+    padding-top: 30%;
+    height:500px;
+    width: 500px;
+    
+  
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.verdad1{
+    position:absolute;
+    height:30%;
+    width:30%;
+    top: 25%;
+    transform: rotate(12deg) !important;
+}
+.verdad4{
+    position:absolute;
+    height:30%;
+    width:30%;
+    top: 25%;
+    transform: rotate(100deg) !important;
+}
+.verdad4{
+    position:absolute;
+    height:30%;
+    width:30%;
+    top: 25%;
+    transform: rotate(100deg) !important;
+}
+.desafio1{
+    position:absolute;
+    height:30%;
+    width:30%;
+    top: 25%;
+    transform: rotate(45deg) !important;
+}
+.desafio2{
+    position:absolute;
+    height:30%;
+    width:30%;
+    top: 25%;
+    transform: rotate(350deg) !important;
+}
+.desafio4{
+    position:absolute;
+    height:30%;
+    width:30%;
+    top: 25%;
+    transform: rotate(150deg) !important;
+}
+
 /*para rotacion*/
 @-webkit-keyframes spin{
     100%{-webkit-transform: rotate(360deg);}
@@ -125,6 +146,7 @@ ion-card-content {
     position: relative;
     top: -50px;
     height: 100px;
+    text-align: justify;
 }
 
 .avatar {

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CartaTraguitoPageRoutingModule } from './carta-traguito-routing.module';
 
 import { CartaTraguitoPage } from './carta-traguito.page';
+import { ComponentsModule } from '../../components/components.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CartaTraguitoPageRoutingModule
+    CartaTraguitoPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [CartaTraguitoPage]
 })

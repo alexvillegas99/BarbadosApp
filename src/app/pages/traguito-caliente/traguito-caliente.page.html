@@ -3,10 +3,8 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/" color="texto"></ion-back-button>
     </ion-buttons>
-    <ion-title class="ion-text-capitalize"><label>Jugadores</label></ion-title>
-    <ion-button slot="end" (click)="modal()" fill="clear">
-      <ion-icon color="texto" slot="icon-only" name="information-circle-outline"></ion-icon>
-    </ion-button>
+    <ion-title class="ion-text-capitalize" text-center><label>Traguito Caliente</label></ion-title>
+  
   </ion-toolbar>
 </ion-header>
 <ion-content color="mycolor2">
@@ -21,7 +19,7 @@
               <h2 style="font-weight: bold;">{{jugadorActual.nombre}}</h2>
             </label></ion-card-subtitle>
         </ion-card-header>
-        <ion-card-content style="padding-left: 20%; padding-right: 20%;">
+        <ion-card-content style="padding-left: 20%; padding-right: 20%; text-align: justify;">
           <label class="pregunta">
             <h2 style="font-weight: bold;">{{PreguntaActual.texto}}</h2>
           </label>

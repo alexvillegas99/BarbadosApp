@@ -6,10 +6,7 @@
 </ion-header>
 
 <ion-content color="mycolor2">  <ion-slides pager="ios" class="slide-full">
-  <ion-button class="info" slot="icon-only" >
-    <ion-icon slot="start" name="information-circle"></ion-icon>
-  </ion-button>
-  <ion-slide>
+  <ion-slide  *ngIf="ocultarSlider">
   
    <ion-card mode="ios">
    
@@ -18,8 +15,8 @@
      <ion-card-header >
      </ion-card-header>
      <br>
-     <ion-card-content  style=" margin-top: -170px;" >
-      <label >  <h3>Información</h3></label>
+     <ion-card-content  style=" margin-top: -180px;" >
+      <label >  <h2>{{informacion}}</h2></label>
      </ion-card-content>
      <br>
       <button expand="block" (click)="cerrar()"  style="margin-top: 130px;"  class="btn-3d">Entendido!</button>

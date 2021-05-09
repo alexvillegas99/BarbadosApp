@@ -3,7 +3,7 @@
     height: 100% !important;
    
 }
-ion-img {
+.img-1 {
     overflow: unset !important;
     position: fixed;
     height: 550px;
@@ -48,3 +48,62 @@ label{
 }
 
 
+//Segunda Pesataña
+
+.info {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+  }
+.slide-full {
+    height: 100% !important;
+    position: relative;
+  //  background-image: linear-gradient(to bottom, #051937, #0d3053, #144971, #19648f, #1d80ac);
+}
+.label{
+    color: #fff;
+}
+.ion-card {
+    overflow: unset !important;
+    background: #845899;
+}
+
+.ion-card {
+    position: fixed;
+    height: 300px;
+    width: 300px;
+    
+}
+.tipo{
+    top: -300px;
+}
+.slide-image2 {
+    
+    width: 200px !important;
+    text-align: center !important;
+
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    position: relative !important;
+    top: -200px !important;
+}
+
+.ion-card-header {
+    position: relative;
+    top: -50px;
+}
+
+.ion-card-content {
+    position: relative;
+    top: -50px;
+    height: 100px;
+    text-align: justify;
+}
+
+
+.btn-continuar{
+    margin-top: 15px;
+}

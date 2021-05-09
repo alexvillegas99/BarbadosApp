@@ -26,6 +26,29 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 //Mis CssGlobales
+ion-alert {
+  --background: #07d2f2 !important;
+
+  button {
+      color: #845899 !important;
+      font-size: 20px !important;
+      
+  }
+  .alert-message {
+      color: white  !important;
+      font-size: 16px !important;
+      font-weight: bold;
+  }
+  .alertHeader {
+    color: #b52024 !important;
+   // --color: #b52024 !important;
+ }
+}
+
+body{
+  background: #07d2f2 !important;
+}
+//
 .btn-3d {
     padding: .6rem 1rem;
     border: 1px solid #845899;
@@ -67,10 +90,7 @@
   label{
     color: #fff !important;
   }
-  .my-custom-class{
-    color:red !important;
-    
-  }
+
 
 
 
